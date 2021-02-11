@@ -1,0 +1,62 @@
+/*variables*/
+
+$yellow: #f7ebb1;
+$beige: #e8dfd8;
+$light-pink: #e6c8c5;
+$dark-pink: #d9b2ac;
+$light-blue: #d9b2ac;
+$dark-blue: #b6dce4;
+$green: #c3d2c2;
+
+$font-text: 'Cormorant Garamond', serif;
+
+/*global*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  background-color: $beige;
+}
+
+h2 {
+  font-family: $font-text;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+/*home*/
+
+.home {
+  height: 100vh;
+  justify-content: center;
+}
+
+.oval-background {
+  background-color: $light-pink;
+  height: 70%;
+  border-radius: 0 0 200px 200px;
+  padding: 0 50px;
+  margin: 0 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.welcome-title {
+  margin-top: auto;
+}
+
+.detail-title {
+  margin-bottom: auto;
+}
