@@ -8,6 +8,16 @@ $blue: #b6dce4;
 $green: #c3d2c2;
 
 $font-text: 'Cormorant Garamond', serif;
+$font-maya: 'maja7regular', serif;
+
+@font-face {
+  font-family: 'maja7regular';
+  src: url('../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
+       url('../vendor/maya-font/maja7-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 /*global*/
 
@@ -27,11 +37,10 @@ section {
 h2 {
   font-family: $font-text;
   font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
-h1 {
-  margin: 20px 0;
-}
 
 /*animations*/
 
@@ -47,74 +56,98 @@ h1 {
 /*home*/
 
 .home {
-  height: 100vh;
+  height: 120vh;
   justify-content: center;
 }
 
 .oval-background {
   background-color: $light-pink;
-  height: 70%;
+  height: 60%;
   border-radius: 0 0 200px 200px;
-  padding: 0 50px;
+  padding: 0 100px;
   margin: 0 50px;
   text-align: center;
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
   align-content: flex-end;
   z-index: 3;
 }
 
-.welcome-title {
-  margin-top: auto;
-}
 
 .detail-title {
-  margin-bottom: auto;
+  margin-bottom: 50%;
 }
 
-.oval-blue-1{
-  background-color: $blue;
-  height: 100px;
-  width: 50px;
-  border-radius: 50px;
+
+h1 {
+  margin: 50px 0;
+  font-family: $font-maya;
+  font-size: 40px;
+  position: relative;
+}
+
+h1::after{
+  content: "";
+  width: 2px;
+  height: 100%;
   position: absolute;
-  top: 10%;
-  left: 10%;
-  animation: appear 1s linear 2s both;
+  background-color: black;
+  animation: appear 1s infinite ease;
+   
 }
 
-.oval-yellow-1{
-  background-color: $yellow;
-  height: 50px;
-  width: 100px;
-  border-radius: 50px;
-  position: absolute;
-  top: 30%;
-  right: 3%;
-  animation: appear 1s linear 3s both;
-}
-
-.oval-green-1{
-  background-color: $green;
-  height: 70px;
-  width: 70px;
-  border-radius: 50px;
+.oval-1{
+  height: 25%;
   position: absolute;
   top: 80%;
-  right: 60%;
-  animation: appear 1s linear 3s reverse both;
+  left: 30%;
+  animation: appear 1s linear 2s both;
+  transition: transform 1s ease;
+}
+
+.oval-1:hover{
+  transform: rotate(360deg);
+}
+
+.oval-2{
+  height: 50%;
+  position: absolute;
+  top: 7%;
+  left: -3%;
+  animation: appear 1s linear 3s both;
+  transition: transform 1s ease;
+}
+
+.oval-2:hover{
+  transform: scale(1.2);
+}
+
+.oval-3{
+  height: 45%;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  animation: appear 1s linear 1s both;
+  transition: transform 1s ease;
+}
+
+.oval-3:hover{
+  transform: rotate(50deg);
 }
 
 /*welcome caprion*/
 
-.welcome-caption{
+.welcome{
   background-color: white;
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
+  border-right: 80px $beige solid;
+  border-left: 80px $beige solid;
 }
 
-.caption{
+.welcome-caption{
   margin: 8%;
   padding: 4%;
   font-family: $font-text;
@@ -134,10 +167,57 @@ h1 {
 .mamrotek-rakieta{
   width: 100%;
   object-fit: contain;
+  opacity: 0.8;
 }
 
 /*sisters*/
 
-.sisters-caption{
-  min-height: 50vh;
+.sisters{
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  justify-content: center;
 }
+
+.sisters-container{
+  width: 50%;
+  position: relative;
+}
+
+.sisters-caption{
+  z-index: 3;
+  position: absolute;
+  font-size: 38px;
+  font-family: $font-maya;
+  width: 20%;
+  top: 20%;
+  left: 30%;
+  line-height: 60px;
+}
+
+.sisters-img,
+.kopuly-img{
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  
+}
+
+.sisters-img{
+z-index: 2;
+}
+
+.kopuly-img{
+z-index: 3;
+}
+
+
+/*footer*/
+
+footer{
+  height: 50vh;
+}
+
+/*media queries*/
+
+// .welcome-caption font size- z 25 zmneijszyc
