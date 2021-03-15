@@ -29,9 +29,12 @@ $font-maya: 'maja7regular', serif;
   box-sizing: border-box;
 }
 
+body{
+  background-color: $beige;
+}
+
 section {
   display: flex;
-  background-color: $beige;
 }
 
 h2 {
@@ -41,6 +44,12 @@ h2 {
   font-size: 20px;
 }
 
+h3{
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 50px auto;
+}
 
 /*animations*/
 
@@ -53,6 +62,16 @@ h2 {
   }
 }
 
+@keyframes showfromup {
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(-40%);
+  }
+}
+
+
 /*home*/
 
 .home {
@@ -62,7 +81,7 @@ h2 {
 
 .oval-background {
   background-color: $light-pink;
-  height: 60%;
+  height: 100%;
   border-radius: 0 0 200px 200px;
   padding: 0 100px;
   margin: 0 50px;
@@ -72,13 +91,12 @@ h2 {
   flex-direction: column;
   align-content: flex-end;
   z-index: 3;
+  animation: showfromup 2s cubic-bezier(.37,.31,.5,1.52) forwards;
 }
-
 
 .detail-title {
   margin-bottom: 50%;
 }
-
 
 h1 {
   margin: 50px 0;
@@ -136,15 +154,14 @@ h1::after{
   transform: rotate(50deg);
 }
 
-/*welcome caprion*/
+/*welcome*/
 
 .welcome{
   background-color: white;
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
-  border-right: 80px $beige solid;
-  border-left: 80px $beige solid;
+  margin: 0 80px 80px 80px;
 }
 
 .welcome-caption{
@@ -170,37 +187,99 @@ h1::after{
   opacity: 0.8;
 }
 
+/*worlds*/
+
+.worlds{
+  min-height: 80vh;
+  margin: 500px 0 400px 0;
+  position: relative;
+  background-color: $light-pink;
+}
+
+.worlds-top{
+  width: 100%;
+  position: absolute;
+  transform: translateY(-99%);
+}
+
+.worlds-top img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.worlds-bottom{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(99%);
+}
+
+.worlds-bottom img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.worlds-container{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.world-link{
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: black;
+  font-family: $font-text;
+  transition: all 1s ease;
+}
+
+.world-link:hover{
+  border-radius: 50px;
+}
+
 /*sisters*/
 
 .sisters{
-  min-height: 100vh;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  justify-content: center;
+  height: 100vh;
 }
 
 .sisters-container{
-  width: 50%;
+  width: 60%;
   position: relative;
+  margin: 10px 200px 10px auto;
 }
 
 .sisters-caption{
-  z-index: 3;
+  z-index: 4;
   position: absolute;
   font-size: 38px;
   font-family: $font-maya;
-  width: 20%;
-  top: 20%;
-  left: 30%;
+  width: 40%;
+  top: 35%;
+  left: 20%;
   line-height: 60px;
 }
 
 .sisters-img,
 .kopuly-img{
   height: 100%;
+  width: 100%;
   object-fit: contain;
   position: absolute;
-  
 }
 
 .sisters-img{
@@ -215,8 +294,11 @@ z-index: 3;
 /*footer*/
 
 footer{
-  height: 50vh;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
 }
+
 
 /*media queries*/
 
