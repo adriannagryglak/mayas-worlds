@@ -63,4 +63,3 @@ gsap.to(kopulyImg, {
 -czemu po scrolowaniu ponizej home animacja typeingu sie zatrzymuje bez progresu ?
 */
 
-

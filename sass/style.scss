@@ -47,8 +47,8 @@ h2 {
 h3{
   font-family: $font-text;
   font-weight: 400;
-  font-size: 25px;
-  margin: 50px auto;
+  font-size: 30px;
+  margin: 8% auto;
 }
 
 /*animations*/
@@ -225,31 +225,94 @@ h1::after{
   width: 80%;
   height: 80%;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  // border: 1px solid red;
 }
 
 .world-link{
-  margin: 10px;
-  padding: 20px;
+  padding: 40px;
   background-color: white;
-  line-height: 50px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   color: black;
   font-family: $font-text;
+  transition: all 0.7s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.button{
+  position: relative;
+}
+
+.sneak-img{
+  z-index: -3;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  max-height: 100%;
   transition: all 1s ease;
 }
 
 .world-link:hover{
   border-radius: 50px;
 }
+
+.world-link span{
+  z-index: 2;
+}
+
+.world-link::before{
+  content: "";
+  width: 1px;
+  height: 1px;
+  background-color: $green;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.1s linear, transform 1.5s ease;
+}
+
+.world-link:hover::before{
+  opacity: 1;
+  transform: scale(300); 
+}
+
+.worlds-container > div:nth-child(2) > .world-link::before,
+.worlds-container > div:nth-child(5) > .world-link::before{
+  background-color: $yellow;
+}
+
+.worlds-container > div:nth-child(3) > .world-link::before,
+.worlds-container > div:nth-child(6) > .world-link::before{
+  background-color: $blue;
+}
+
+.world-link:hover ~ .sneak-img{
+  transform:  translateY(-20%) rotate(30deg);
+}
+
+.worlds-container > div:nth-child(2) > .world-link:hover ~ .sneak-img,
+.worlds-container > div:nth-child(5) > .world-link:hover ~ .sneak-img{
+  transform:  translate(-30%, 145%);
+}
+
+.worlds-container > div:nth-child(3) > .world-link:hover ~ .sneak-img,
+.worlds-container > div:nth-child(6) > .world-link:hover ~ .sneak-img{
+  transform: rotate(-30deg) translate(-80%,-60%);
+}
+
 
 /*sisters*/
 
