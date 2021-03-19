@@ -1,0 +1,84 @@
+@import './settings.scss';
+@import './global.scss';
+
+/*home*/
+
+.home {
+    height: 120vh;
+    justify-content: center;
+  }
+  
+  .oval-background {
+    background-color: $light-pink;
+    height: 100%;
+    border-radius: 0 0 200px 200px;
+    padding: 0 100px;
+    margin: 0 50px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: flex-end;
+    z-index: 3;
+    animation: showfromup 2s cubic-bezier(.37,.31,.5,1.52) forwards;
+  }
+  
+  .detail-title {
+    margin-bottom: 50%;
+  }
+  
+  h1 {
+    margin: 50px 0;
+    font-family: $font-maya;
+    font-size: 40px;
+    position: relative;
+  }
+  
+  h1::after{
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    animation: appear 1s infinite ease;
+     
+  }
+  
+  .oval-1{
+    height: 25%;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    animation: appear 1s linear 2s both;
+    transition: transform 1s ease;
+  }
+  
+  .oval-1:hover{
+    transform: rotate(360deg);
+  }
+  
+  .oval-2{
+    height: 50%;
+    position: absolute;
+    top: 7%;
+    left: -3%;
+    animation: appear 1s linear 3s both;
+    transition: transform 1s ease;
+  }
+  
+  .oval-2:hover{
+    transform: scale(1.2);
+  }
+  
+  .oval-3{
+    height: 45%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    animation: appear 1s linear 1s both;
+    transition: transform 1s ease;
+  }
+  
+  .oval-3:hover{
+    transform: rotate(50deg);
+  }

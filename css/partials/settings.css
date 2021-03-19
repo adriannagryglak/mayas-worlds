@@ -1,0 +1,9 @@
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=settings.css.map */

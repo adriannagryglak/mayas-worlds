@@ -1,0 +1,41 @@
+@import './settings.scss';
+@import './global.scss';
+
+/*sisters*/
+
+.sisters{
+    height: 100vh;
+  }
+  
+  .sisters-container{
+    width: 60%;
+    position: relative;
+    margin: 10px 200px 10px auto;
+  }
+  
+  .sisters-caption{
+    z-index: 4;
+    position: absolute;
+    font-size: 38px;
+    font-family: $font-maya;
+    width: 40%;
+    top: 35%;
+    left: 20%;
+    line-height: 60px;
+  }
+  
+  .sisters-img,
+  .kopuly-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+  }
+  
+  .sisters-img{
+  z-index: 2;
+  }
+  
+  .kopuly-img{
+  z-index: 3;
+  }

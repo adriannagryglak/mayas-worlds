@@ -1,0 +1,65 @@
+
+@import './settings.scss';
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $beige;
+}
+
+section {
+  display: flex;
+}
+
+h2 {
+  font-family: $font-text;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3{
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+
+footer{
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
+
+// .welcome-caption font size- z 25 zmneijszyc

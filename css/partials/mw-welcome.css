@@ -1,0 +1,107 @@
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dfd8;
+}
+
+section {
+  display: flex;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
+/*welcome*/
+.welcome {
+  background-color: white;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  margin: 0 80px 80px 80px;
+}
+
+.welcome-caption {
+  margin: 8%;
+  padding: 4%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  z-index: 2;
+}
+
+.mamrotek-rakieta-container {
+  position: absolute;
+  margin-bottom: 15px;
+  width: 15%;
+  left: -15%;
+  bottom: 3%;
+  z-index: 1;
+}
+
+.mamrotek-rakieta {
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=mw-welcome.css.map */

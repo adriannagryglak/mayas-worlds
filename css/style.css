@@ -1,4 +1,19 @@
 /*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*global*/
 *,
 *::after,
@@ -8,19 +23,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #e8dfd8;
+}
+
 section {
   display: -ms-flexbox;
   display: flex;
-  background-color: #e8dfd8;
 }
 
 h2 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
-h1 {
-  margin: 20px 0;
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
 }
 
 /*animations*/
@@ -33,80 +56,269 @@ h1 {
   }
 }
 
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dfd8;
+}
+
+section {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
 /*home*/
 .home {
-  height: 100vh;
+  height: 120vh;
   -ms-flex-pack: center;
       justify-content: center;
 }
 
 .oval-background {
   background-color: #e6c8c5;
-  height: 70%;
+  height: 100%;
   border-radius: 0 0 200px 200px;
-  padding: 0 50px;
+  padding: 0 100px;
   margin: 0 50px;
   text-align: center;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   z-index: 3;
-}
-
-.welcome-title {
-  margin-top: auto;
+  animation: showfromup 2s cubic-bezier(0.37, 0.31, 0.5, 1.52) forwards;
 }
 
 .detail-title {
-  margin-bottom: auto;
+  margin-bottom: 50%;
 }
 
-.oval-blue-1 {
-  background-color: #b6dce4;
-  height: 100px;
-  width: 50px;
-  border-radius: 50px;
+h1 {
+  margin: 50px 0;
+  font-family: "maja7regular", serif;
+  font-size: 40px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  width: 2px;
+  height: 100%;
   position: absolute;
-  top: 10%;
-  left: 10%;
-  animation: appear 1s linear 2s both;
+  background-color: black;
+  animation: appear 1s infinite ease;
 }
 
-.oval-yellow-1 {
-  background-color: #f7ebb1;
-  height: 50px;
-  width: 100px;
-  border-radius: 50px;
-  position: absolute;
-  top: 30%;
-  right: 3%;
-  animation: appear 1s linear 3s both;
-}
-
-.oval-green-1 {
-  background-color: #c3d2c2;
-  height: 70px;
-  width: 70px;
-  border-radius: 50px;
+.oval-1 {
+  height: 25%;
   position: absolute;
   top: 80%;
-  right: 60%;
-  animation: appear 1s linear 3s reverse both;
+  left: 30%;
+  animation: appear 1s linear 2s both;
+  transition: transform 1s ease;
 }
 
-/*welcome caprion*/
-.welcome-caption {
+.oval-1:hover {
+  transform: rotate(360deg);
+}
+
+.oval-2 {
+  height: 50%;
+  position: absolute;
+  top: 7%;
+  left: -3%;
+  animation: appear 1s linear 3s both;
+  transition: transform 1s ease;
+}
+
+.oval-2:hover {
+  transform: scale(1.2);
+}
+
+.oval-3 {
+  height: 45%;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  animation: appear 1s linear 1s both;
+  transition: transform 1s ease;
+}
+
+.oval-3:hover {
+  transform: rotate(50deg);
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dfd8;
+}
+
+section {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
+/*welcome*/
+.welcome {
   background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
   position: relative;
+  margin: 0 80px 80px 80px;
 }
 
-.caption {
+.welcome-caption {
   margin: 8%;
   padding: 4%;
   font-family: "Cormorant Garamond", serif;
@@ -127,10 +339,328 @@ h1 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  opacity: 0.8;
 }
 
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dfd8;
+}
+
+section {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
+/*worlds*/
+.worlds {
+  min-height: 80vh;
+  margin: 500px 0 400px 0;
+  position: relative;
+  background-color: #e6c8c5;
+}
+
+.worlds-top {
+  width: 100%;
+  position: absolute;
+  transform: translateY(-99%);
+}
+
+.worlds-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.worlds-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(99%);
+}
+
+.worlds-bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.worlds-container {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.world-link {
+  padding: 40px;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  transition: all 0.7s ease;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+}
+
+.button {
+  position: relative;
+}
+
+.sneak-img {
+  z-index: -3;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  max-height: 100%;
+  transition: all 1s ease;
+}
+
+.world-link:hover {
+  border-radius: 50px;
+}
+
+.world-link span {
+  z-index: 2;
+}
+
+.world-link::before {
+  content: "";
+  width: 1px;
+  height: 1px;
+  background-color: #c3d2c2;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.1s linear, transform 1.5s ease;
+}
+
+.world-link:hover::before {
+  opacity: 1;
+  transform: scale(300);
+}
+
+.worlds-container > div:nth-child(2) > .world-link::before,
+.worlds-container > div:nth-child(5) > .world-link::before {
+  background-color: #f7ebb1;
+}
+
+.worlds-container > div:nth-child(3) > .world-link::before,
+.worlds-container > div:nth-child(6) > .world-link::before {
+  background-color: #b6dce4;
+}
+
+.world-link:hover ~ .sneak-img {
+  transform: translateY(-20%) rotate(30deg);
+}
+
+.worlds-container > div:nth-child(2) > .world-link:hover ~ .sneak-img,
+.worlds-container > div:nth-child(5) > .world-link:hover ~ .sneak-img {
+  transform: translate(-30%, 145%);
+}
+
+.worlds-container > div:nth-child(3) > .world-link:hover ~ .sneak-img,
+.worlds-container > div:nth-child(6) > .world-link:hover ~ .sneak-img {
+  transform: rotate(-30deg) translate(-80%, -60%);
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variables*/
+@font-face {
+  font-family: 'maja7regular';
+  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dfd8;
+}
+
+section {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 8% auto;
+}
+
+/*animations*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showfromup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(-40%);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/*media queries*/
 /*sisters*/
+.sisters {
+  height: 100vh;
+}
+
+.sisters-container {
+  width: 60%;
+  position: relative;
+  margin: 10px 200px 10px auto;
+}
+
 .sisters-caption {
-  min-height: 50vh;
+  z-index: 4;
+  position: absolute;
+  font-size: 38px;
+  font-family: "maja7regular", serif;
+  width: 40%;
+  top: 35%;
+  left: 20%;
+  line-height: 60px;
+}
+
+.sisters-img,
+.kopuly-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+
+.sisters-img {
+  z-index: 2;
+}
+
+.kopuly-img {
+  z-index: 3;
 }
 /*# sourceMappingURL=style.css.map */

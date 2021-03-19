@@ -1,0 +1,19 @@
+/*variables*/
+
+$yellow: #f7ebb1;
+$beige: #e8dfd8;
+$light-pink: #e6c8c5;
+$dark-pink: #d9b2ac;
+$blue: #b6dce4;
+$green: #c3d2c2;
+
+$font-text: 'Cormorant Garamond', serif;
+$font-maya: 'maja7regular', serif;
+
+@font-face {
+  font-family: 'maja7regular';
+  src: url('../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
+       url('../vendor/maya-font/maja7-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

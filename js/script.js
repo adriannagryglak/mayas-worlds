@@ -18,14 +18,18 @@ function typeing() {
 
 document.addEventListener("DOMContentLoaded", typeing());
 
-//ANIMATING WELCOME CAPTION
+//ANIMATING WELCOME CAPTION, WORLDS and SISTERS
 
 const caption = document.querySelector('.welcome .welcome-caption');
 const welcomeSection = document.querySelector('.welcome');
 const mamRocket = document.querySelector('.mamrotek-rakieta-container');
 const mamRocketImg = document.querySelector('.mamrotek-rakieta');
 const kopulyImg = document.querySelector('.kopuly-img');
+const worldsTitle = document.querySelector('.worlds h3');
+const worldsSection = document.querySelector('.worlds');
+const worldsBtns = document.querySelectorAll('.worlds-container .button');
 
+//welcome
 gsap.fromTo(caption, { y: '+=100', opacity: '0' }, {
     y: '0', opacity: '1', duration: 1, ease: 'easeInOut', scrollTrigger: {
         trigger: welcomeSection,
@@ -33,6 +37,7 @@ gsap.fromTo(caption, { y: '+=100', opacity: '0' }, {
     }
 });
 
+//mamrocket
 let animation = gsap.timeline({
     delay: 3, repeat: -1, repeatDelay: 2, scrollTrigger: {
         trigger: welcomeSection,
@@ -47,6 +52,7 @@ animation.to(mamRocket, { x: window.innerWidth + mamRocket.offsetWidth, duration
     .to(mamRocket, { y: -welcomeSection.offsetHeight, duration: 4.5 }, 5.5)
     .to(mamRocket, { scale: 0.3, duration: 3.5 }, 6.5);
 
+//sisters heads
 gsap.to(kopulyImg, {
     y: -35, duration: 1, scrollTrigger: {
         trigger: kopulyImg,
@@ -55,6 +61,23 @@ gsap.to(kopulyImg, {
         scrub: 1
     }
 });
+
+//worlds and buttons
+gsap.fromTo(worldsTitle, { y: '+=100', opacity: '0' }, {
+    y: '0', opacity: '1', duration: 1, ease: 'easeInOut', scrollTrigger: {
+        trigger: worldsSection,
+        start: 'top 50%'
+    }
+});
+
+    gsap.fromTo(worldsBtns, {opacity: 0}, { opacity: 1, stagger: 1, duration: 1, ease: 'easeInOut', scrollTrigger: {
+    trigger: worldsSection,
+    start: 'top 45%'
+  }});  
+
+  
+    
+
 
 /* TO DO's
 -odjezdza rakieta zle w mobile

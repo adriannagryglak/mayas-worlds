@@ -1,0 +1,35 @@
+@import './settings.scss';
+@import './global.scss';
+
+/*welcome*/
+
+.welcome{
+    background-color: white;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    margin: 0 80px 80px 80px;
+  }
+  
+  .welcome-caption{
+    margin: 8%;
+    padding: 4%;
+    font-family: $font-text;
+    font-size: 25px;
+    z-index: 2;
+  }
+  
+  .mamrotek-rakieta-container{
+    position: absolute;
+    margin-bottom: 15px;
+    width: 15%;
+    left: -15%;
+    bottom: 3%;
+    z-index: 1;
+  }
+  
+  .mamrotek-rakieta{
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+  }
