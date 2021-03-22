@@ -9,29 +9,12 @@
   }
   
   .oval-background {
-    background-color: $light-pink;
     height: 100%;
-    border-radius: 0 0 200px 200px;
-    padding: 0 100px;
-    margin: 0 50px;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-content: flex-end;
-    z-index: 3;
     animation: showfromup 2s cubic-bezier(.37,.31,.5,1.52) forwards;
   }
   
-  .detail-title {
-    margin-bottom: 50%;
-  }
-  
-  h1 {
-    margin: 50px 0;
-    font-family: $font-maya;
-    font-size: 40px;
-    position: relative;
+  h1{
+  position: relative;
   }
   
   h1::after{
@@ -41,7 +24,10 @@
     position: absolute;
     background-color: black;
     animation: appear 1s infinite ease;
-     
+  }
+
+  .detail-title {
+    margin-bottom: 50%;
   }
   
   .oval-1{

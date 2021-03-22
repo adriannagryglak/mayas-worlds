@@ -4,15 +4,203 @@
 @font-face {
   font-family: 'maja7regular';
   src: url('../../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
-       url('../../vendor/maya-font/maja7-webfont.woff') format('woff');
+    url('../../vendor/maya-font/maja7-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 $font-maya: 'maja7regular', serif;
 
+/* home */
 
-body{
-    background-color: $green;
-    font-family: $font-maya;
+.home {
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 100px;
+  flex-direction: column;
+}
+
+.oval-1,
+.oval-3 {
+  position: absolute;
+}
+
+.oval-1 {
+  height: 300px;
+  top: 10%;
+  right: 8%;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(53%) saturate(845%)
+    hue-rotate(321deg) brightness(103%) contrast(94%);
+  transition: all 0.5s ease;
+  animation: appear 1s linear 1s both;
+}
+
+.oval-3 {
+  height: 400px;
+  top: 20%;
+  left: -10%;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(208%)
+    hue-rotate(143deg) brightness(100%) contrast(86%);
+  transform: rotate(-40deg);
+  transition: all 1s ease;
+  animation: appear linear 0.7s both;
+}
+
+.oval-1:hover {
+  transform: rotate(-30deg) scale(1.2);
+}
+
+.oval-3:hover {
+  transform: rotate(200deg);
+}
+
+.oval-background {
+  min-height: 40vh;
+  border-radius: 200px 200px 0 0;
+}
+
+h1 {
+  font-family: $font-maya;
+  margin: 30px 0;
+  font-size: 45px;
+}
+
+.welcome-title {
+  margin-top: 50%;
+}
+
+.welcome-title,
+.detail-title {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title::before,
+.detail-title::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title::before {
+  transform: translateX(-150%);
+}
+
+.detail-title::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: $font-text;
+  font-size: 25px;
+  animation: appear 1s linear 1s both;
+}
+
+.oval-bottom {
+  height: 200px;
+  width: 488px; //future problems with responsivnes
+  position: relative;
+}
+
+.oval-bottom img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.mamrotki-map {
+  height: 90vh;
+  margin: 100px 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container img {
+  max-height: 90vh;
+  max-width: 80vw;
+}
+
+.map-container {
+  position: absolute;
+}
+
+.tooltip {
+  position: absolute;
+  height: 7%;
+  width: 6%;
+  cursor: url(../../images/kotki-mamrotki/search-icon.png), help;
+}
+
+.thief {
+  top: 35%;
+  right: 27%;
+}
+.biuro {
+  top: 35%;
+  left: 11.5%;
+  height: 5%;
+  width: 4%;
+}
+.musician {
+  top: 13%;
+  left: 58%;
+  height: 5%;
+  width: 4%;
+}
+.clown {
+  top: 15%;
+  left: 30%;
+  height: 8%;
+  width: 7%;
+}
+
+.painter {
+  top: 24%;
+  left: 56%;
+  height: 6%;
+  width: 3%;
+}
+
+.cook {
+  top: 56%;
+  left: 12%;
+  height: 8%;
+  width: 7%;
+}
+
+.scream {
+  top: 70%;
+  left: 11%;
+}
+.ski {
+  top: 80%;
+  right: 9%;
+  width: 8%;
+}
+.bus {
+  bottom: 8%;
+  left: 50%;
+  width: 8%;
+}
+.runner {
+  top: 56%;
+  left: 52%;
+  height: 5%;
+  width: 4%;
 }

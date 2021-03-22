@@ -32,6 +32,25 @@ h3{
   margin: 8% auto;
 }
 
+h1 {
+  margin: 50px 0;
+  font-family: $font-maya;
+  font-size: 40px;
+}
+
+.oval-background{
+  background-color: $light-pink;
+  border-radius: 0 0 200px 200px;
+  padding: 0 100px;
+  margin: 0 50px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-content: flex-end;
+  z-index: 3;
+}
+
 /*animations*/
 
 @keyframes appear {
@@ -58,6 +77,11 @@ footer{
   padding: 20px;
   text-align: center;
   background-color: white;
+}
+
+footer span{
+  font-family: $font-maya;
+  font-size: 18px;
 }
 
 /*media queries*/
