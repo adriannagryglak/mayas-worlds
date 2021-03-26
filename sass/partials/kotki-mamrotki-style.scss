@@ -144,7 +144,7 @@ h1 {
   position: absolute;
   height: 7%;
   width: 6%;
-  cursor: url(../../images/kotki-mamrotki/search-icon.png), help;
+  cursor: url(../../images/kotki-mamrotki/search-icon.png), help; //to big for mobile
 }
 
 .thief {
@@ -203,4 +203,67 @@ h1 {
   left: 52%;
   height: 5%;
   width: 4%;
+}
+
+/*test*/
+
+.mamrotki-test{
+  min-height: 50vh;
+  margin: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+#test{
+  background-color: $green;
+  width: 100%;
+  font-size: 23px;
+  padding: 50px;
+}
+
+.question{
+  // border: 1px solid white;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+}
+
+.question:nth-child(2n){
+  justify-content: flex-end;
+  padding-left: 80px;
+}
+
+.question-caption{
+  // border: 2px solid blue;
+  padding: 30px;
+  text-align: center;
+}
+
+.question-caption p{
+  text-transform: uppercase;
+}
+
+.question-caption ul{
+  list-style-type: none;
+}
+
+.question-caption ul span{
+  font-family: $font-maya;
+}
+
+.question-img{
+  position: relative;
+  min-width: 40%;
+  // border: 1px solid red;
+}
+
+.question-img img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.question:nth-child(2n) > .question-img {
+  order: 1;
 }

@@ -36,7 +36,6 @@
         <img src="../images/kotki-mamrotki/oval-bottom.png" />
       </div>
     </section>
-
     <section class="mamrotki-map">
       <div class="map-container">
         <img src="../images/kotki-mamrotki/mamrotki.png" />
@@ -52,12 +51,34 @@
         <div class="tooltip bus" title="następny przystanek Planeta Pana Ludka"></div>
       </div>
     </section>
-    <section class=""></section>
+    <section class="mamrotki-test">
+      <div id="test">
+        <!-- here will be handlebars generated templates filled with our data in js -->
+      </div>
+    </section>
 
-    <footer>
+    <footer id="footer">
       <p><span>made with love</span>  by Adrianna Gryglak</p>
     </footer>
 
+    <!--below is handlebars template for single question to generate test in div above-->
+    <script id="question-template" type="text/x-handlebars-template">
+      <div class="question">
+        <div class="question-img">{{{image}}}</div>
+        <div class="question-caption">
+          <p>{{caption}}</p>
+          <ul>
+            {{#each options}}
+            <li><span>{{@key}} </span> {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="../js/data.js"></script>
     <script src="../js/kotki-mamrotki-script.js"></script>
   </body>
 </html>
