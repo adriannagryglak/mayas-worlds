@@ -209,16 +209,39 @@ h1 {
 
 .mamrotki-test{
   min-height: 50vh;
-  margin: 80px;
+  margin: 500px 100px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.img-hint,
+.p-hint{
+  position: absolute;
+  top: -100px;
+  left: 0;
+
+}
+.img-hint{
+  transform: rotate(-90deg);
+  width: 30vw;
+  filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(502%) hue-rotate(65deg) brightness(86%) contrast(91%);
+}
+
+.p-hint{
+  font-family: $font-maya;
+  transform: translateY(-50%);
+  width: 25vw;
+  font-size: 30px;
 }
 
 #test{
-  background-color: $green;
+  background-color: white;
   width: 100%;
   font-size: 23px;
-  padding: 50px;
+  padding: 180px 50px;
+  margin-bottom: 100px;
 }
 
 .question{
@@ -241,6 +264,7 @@ h1 {
 
 .question-caption p{
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .question-caption ul{
@@ -267,3 +291,24 @@ h1 {
 .question:nth-child(2n) > .question-img {
   order: 1;
 }
+
+.question li:hover{
+  font-weight: bolder;
+}
+
+.mamrotki-test .button{
+  width: 15%;
+}
+
+.mamrotki-test .world-link{
+  background-color: $yellow;
+  font-family: $font-maya;
+  text-transform: none;
+  font-size: 30px;
+}
+
+.mamrotki-test .world-link::before{
+  background-color: $blue;
+}
+
+// checkout confetti from https://codepen.io/rebelchris/pen/LYpQRxM
