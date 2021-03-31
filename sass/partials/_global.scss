@@ -157,6 +157,29 @@ footer span{
   font-family: $font-maya;
   font-size: 18px;
 }
+/* creation of user in subpages */
+
+.create-user{
+  background-color: black;
+  color: white;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+
+
 
 /*media queries*/
 

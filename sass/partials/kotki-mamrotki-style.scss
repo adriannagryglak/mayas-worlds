@@ -111,6 +111,10 @@ h1 {
   animation: appear 1s linear 1s both;
 }
 
+.welcome-caption span{
+  font-family: $font-maya;
+}
+
 .oval-bottom {
   height: 200px;
   width: 488px; //future problems with responsivnes
@@ -209,7 +213,7 @@ h1 {
 
 .mamrotki-test{
   min-height: 50vh;
-  margin: 500px 100px;
+  margin: 500px 100px 100px 100px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -305,10 +309,50 @@ h1 {
   font-family: $font-maya;
   text-transform: none;
   font-size: 30px;
+  text-align: center;
 }
 
 .mamrotki-test .world-link::before{
   background-color: $blue;
 }
 
-// checkout confetti from https://codepen.io/rebelchris/pen/LYpQRxM
+//thanks to https://codepen.io/rebelchris/pen/LYpQRxM
+
+.button i {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  background: red;
+  opacity: 0;
+  z-index: 10;
+}
+
+.button:hover {
+  @for $i from 1 through 50 {
+    i:nth-of-type(#{$i}) {
+      transform: translate3d(
+          random(190) - 100 + px,
+          random(200) - 100 + px,
+          0
+        )
+        rotate(random(360) + deg);
+      background: hsla(random(360), 100%, 50%, 1);
+      animation: bang 700ms ease-out forwards;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes bang {
+from {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+}
+
+.choosed{
+  border-bottom: 1px solid $light-pink;
+}
