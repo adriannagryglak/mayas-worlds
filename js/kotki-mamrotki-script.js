@@ -18,7 +18,6 @@
         }
 
         rendertoTest() {
-
             const template = document.getElementById("question-template").innerHTML; //pobierz szablon
             const fillTemplateWith = Handlebars.compile(template); //użyj go w funkci stworzonej
             let newHtml = fillTemplateWith(this.data); //użyj funckji z danymi
@@ -32,7 +31,6 @@
         }
 
         checkIfCorrect() {
-
             let pointsForQuestion
             let trueAnswear
 
@@ -62,32 +60,27 @@
             }
 
             const submitTestBtn = document.querySelector('.button');
-            submitTestBtn.addEventListener('mouseover', function(){
-            
-            console.log(pointsForQuestion);
+            submitTestBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                app.data.points.push(pointsForQuestion);
             });
         }
     }
 
     class User {
-        constructor(id) {
+        constructor(id, points) {
             this.id = id;
-            this.points = 0;
+            this.points = points;
             console.log('THIS USER:', this);
-            document.querySelector('.welcome-caption span').innerHTML = id;
-
-        }
-
-        pointsCounting (){
-            //sumowanie punktow z kazdego pytania ? zapisania jako this.points
-            console.log('pointscountign lol');
         }
     }
 
     const app = {
         initData: function () {
             this.data = dataSource;
+            this.data.points = [];
         },
+
         initTest: function () {
 
             for (let question in this.data.questions) {
@@ -115,27 +108,37 @@
             });
         },
 
-        createUser: function () {
-
+        getName: function () {
             const confirmUserBtn = document.querySelector('.confirm-user');
             const userInput = document.querySelector('.create-user input');
             const userDiv = document.querySelector('.create-user');
 
-            confirmUserBtn.addEventListener('click', function(){
-                console.log('created new user!');
-                new User(userInput.value);
-                userDiv.style.display="none";
+            confirmUserBtn.addEventListener('click', function () {
+                app.data.name = userInput.value;
+                document.querySelector('.welcome-caption span').innerHTML = app.data.name;
+                userDiv.style.display = "none";
+                console.log('mamy imie', app.data.name);
             });
-
-            //when no to siup wyslij punkty na str głowną
 
         },
 
+        createUser: function () {
+            const submitTestBtn = document.querySelector('.button');
+
+            submitTestBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                let numOr0 = n => isNaN(n) ? 0 : n
+                app.data.points = app.data.points.reduce((a, b) => numOr0(a) + numOr0(b));
+                new User(app.data.name, app.data.points);
+                console.log(app.data);
+            });
+        },
+
         init: function () {
-            this.createUser();
             this.initData();
             this.initTest();
-
+            this.getName();
+            this.createUser();
         }
     }
 
