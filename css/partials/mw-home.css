@@ -45,6 +45,25 @@ h3 {
   margin: 8% auto;
 }
 
+h1 {
+  margin: 50px 0;
+  font-family: "maja7regular", serif;
+  font-size: 40px;
+}
+
+.oval-background {
+  background-color: #e6c8c5;
+  border-radius: 0 0 200px 200px;
+  padding: 0 100px;
+  margin: 0 50px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-content: flex-end;
+  z-index: 3;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -71,6 +90,11 @@ footer {
   background-color: white;
 }
 
+footer span {
+  font-family: "maja7regular", serif;
+  font-size: 18px;
+}
+
 /*media queries*/
 /*home*/
 .home {
@@ -79,28 +103,11 @@ footer {
 }
 
 .oval-background {
-  background-color: #e6c8c5;
   height: 100%;
-  border-radius: 0 0 200px 200px;
-  padding: 0 100px;
-  margin: 0 50px;
-  text-align: center;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-content: flex-end;
-  z-index: 3;
   animation: showfromup 2s cubic-bezier(0.37, 0.31, 0.5, 1.52) forwards;
 }
 
-.detail-title {
-  margin-bottom: 50%;
-}
-
 h1 {
-  margin: 50px 0;
-  font-family: "maja7regular", serif;
-  font-size: 40px;
   position: relative;
 }
 
@@ -111,6 +118,10 @@ h1::after {
   position: absolute;
   background-color: black;
   animation: appear 1s infinite ease;
+}
+
+.detail-title {
+  margin-bottom: 50%;
 }
 
 .oval-1 {

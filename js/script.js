@@ -1,4 +1,3 @@
-
 {
     'use strict';
 
@@ -19,16 +18,22 @@
         },
         sisters: {
             kopulyImg: '.kopuly-img',
+            sistersImg: '.sisters-img',
         },
 
     };
 
     const app = {
-        init: function () {
-            const thisApp = this;
-            console.log('*** App starting ***');
-            console.log('thisApp:', thisApp);
-            thisApp.animate();
+
+        initData: function (){
+            console.log('tu beda dane');
+
+            //media queries 
+            const mediaQuery = window.matchMedia('(max-width: 768px)');
+            if (mediaQuery.matches) {
+                document.querySelector(select.sisters.sistersImg).src = './images/sisters-mobile.png';
+                document.querySelector(select.sisters.kopulyImg).src = './images/kopuly-mobile.png';
+              }
         },
 
         animate: function () {
@@ -39,13 +44,15 @@
             const mamRocket = document.querySelector(select.welcome.mamRocketContainer);
             const mamRocketImg = document.querySelector(select.welcome.mamRocketImg);
             const kopulyImg = document.querySelector(select.sisters.kopulyImg);
+            const sistersImg = document.querySelector(select.sisters.sistersImg);
             const worldsTitle = document.querySelector(select.worlds.title);
             const worldsSection = document.querySelector(select.worlds.section);
             const worldsBtns = document.querySelectorAll(select.worlds.buttons);
+            let sistersDistance = sistersImg.offsetHeight;
 
             // ANIMATIE TYPEING EFFECT 
             let index = 0;
-            const text = "Maya's Worlds";
+            const text = "Maya's Worlds"; // /n is for slicing midline, not working in this case
 
             function typeing() {
 
@@ -82,14 +89,8 @@
                     start: 'top 35%'
                 }
             });
-            gsap.to(kopulyImg, {
-                y: -35, duration: 1, scrollTrigger: {
-                    trigger: kopulyImg,
-                    start: 'top 35%',
-                    end: 'bottom 70%',
-                    scrub: 1
-                }
-            });
+
+            
             gsap.fromTo(worldsTitle, { y: '+=100', opacity: '0' }, {
                 y: '0', opacity: '1', duration: 1, ease: 'easeInOut', scrollTrigger: {
                     trigger: worldsSection,
@@ -102,13 +103,22 @@
                     start: 'top 45%'
                 }
             });
+            let distance = -0.04 * sistersDistance;
+            gsap.to(kopulyImg, {y: distance, duration: 1, scrollTrigger: {
+                    trigger: kopulyImg,
+                    start: 'top 35%',
+                    end: 'bottom 70%',
+                    scrub: 1
+                }
+            });
         },
 
-
-
-
-
-
+        init: function () {
+            this.initData();
+            this.animate();
+        
+            
+        },
     };
 
 
@@ -117,9 +127,7 @@
 }
 
 // TO DO's
-// -odjezdza rakieta zle w mobile
-// -odsuwanie img kopuł podczas scrolowania po sekcji sisters jest zależne od pikseli, przez co mobile się rozjeżdza
-// -rozmiar czcionki w sekcji sisters w mobile jest za duży
+
 // -czemu po scrolowaniu ponizej home animacja typeingu sie zatrzymuje bez progresu ?
 
 

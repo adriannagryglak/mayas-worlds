@@ -13,6 +13,7 @@
 body{
   background-color: $beige;
   font-family: $font-text;
+  overflow-x: hidden;
 }
 
 section {
@@ -29,6 +30,7 @@ h3{
   font-weight: 400;
   font-size: 30px;
   margin: 8% auto;
+  text-align: center;
 }
 
 h1 {
@@ -89,6 +91,7 @@ h1 {
 
 .button{
   position: relative;
+  margin: 25px 10px;
 }
 
 .sneak-img{
@@ -142,7 +145,7 @@ h1 {
 }
 
 .worlds-container > div:nth-child(3n) > .world-link:hover ~ .sneak-img{
-  transform: rotate(-30deg) translate(-80%,-60%);
+  transform: rotate(-30deg) translate(-80%,-40%);
 }
 
 /*footer*/
@@ -157,6 +160,7 @@ footer span{
   font-family: $font-maya;
   font-size: 18px;
 }
+
 /* creation of user in subpages */
 
 .create-user{
@@ -174,13 +178,42 @@ footer span{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 1s ease;
+}
 
+.create-user input{
+  margin: 50px;
+  height: 50px;
+  min-width: 30%;
+  font-size: 25px;
+  text-align: center;
+  font-family: $font-maya;
+}
+
+.create-user input:focus{
+  outline: none;
+}
+
+.create-user p{
+  font-size: 25px;
+  margin: 0 50px;
+  text-align: center;
+}
+
+.create-user a{
+  border-radius: 50px;
+}
+
+.create-user p:nth-of-type(2){
+  margin: 50px;
+}
+
+.create-user .button > a::before{
+  background-color: $dark-pink;
+}
+
+.create-user .button:nth-of-type(2n) > a::before{
+  background-color: $yellow;
 }
 
 
-
-
-
-/*media queries*/
-
-// .welcome-caption font size- z 25 zmneijszyc

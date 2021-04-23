@@ -11,6 +11,10 @@
 
 $font-maya: 'maja7regular', serif;
 
+body{
+  overflow-y: hidden;
+}
+
 /* home */
 
 .home {
@@ -23,6 +27,7 @@ $font-maya: 'maja7regular', serif;
 .oval-1,
 .oval-3 {
   position: absolute;
+  z-index: -1;
 }
 
 .oval-1 {
@@ -111,7 +116,7 @@ h1 {
   animation: appear 1s linear 1s both;
 }
 
-.welcome-caption span{
+.welcome-caption span {
   font-family: $font-maya;
 }
 
@@ -119,6 +124,7 @@ h1 {
   height: 200px;
   width: 488px; //future problems with responsivnes
   position: relative;
+  z-index: -1;
 }
 
 .oval-bottom img {
@@ -211,7 +217,7 @@ h1 {
 
 /*test*/
 
-.mamrotki-test{
+.mamrotki-test {
   min-height: 50vh;
   margin: 500px 100px 100px 100px;
   justify-content: center;
@@ -221,26 +227,25 @@ h1 {
 }
 
 .img-hint,
-.p-hint{
+.p-hint {
   position: absolute;
   top: -100px;
   left: 0;
-
 }
-.img-hint{
+.img-hint {
   transform: rotate(-90deg);
   width: 30vw;
-  filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(502%) hue-rotate(65deg) brightness(86%) contrast(91%);
+  filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(502%)
+    hue-rotate(65deg) brightness(86%) contrast(91%);
 }
 
-.p-hint{
+.p-hint {
   font-family: $font-maya;
-  transform: translateY(-50%);
-  width: 25vw;
+  width: 30vw;
   font-size: 30px;
 }
 
-#test{
+#test {
   background-color: white;
   width: 100%;
   font-size: 23px;
@@ -248,44 +253,47 @@ h1 {
   margin-bottom: 100px;
 }
 
-.question{
+.question {
   // border: 1px solid white;
   margin: 20px;
   padding: 10px;
   display: flex;
 }
 
-.question:nth-child(2n){
+.question:nth-child(2n) {
   justify-content: flex-end;
   padding-left: 80px;
 }
 
-.question-caption{
+.question-caption {
   // border: 2px solid blue;
   padding: 30px;
   text-align: center;
 }
 
-.question-caption p{
+.question-caption p {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.question-caption ul{
+.question-caption ul {
   list-style-type: none;
 }
 
-.question-caption ul span{
+
+.question-caption ul span {
   font-family: $font-maya;
 }
 
-.question-img{
+
+
+.question-img {
   position: relative;
   min-width: 40%;
   // border: 1px solid red;
 }
 
-.question-img img{
+.question-img img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -296,15 +304,24 @@ h1 {
   order: 1;
 }
 
-.question li:hover{
-  font-weight: bolder;
+.question li {
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
 }
 
-.mamrotki-test .button{
-  width: 15%;
+.question li.choosed {
+  border-bottom: 1px solid $light-pink;
 }
 
-.mamrotki-test .world-link{
+.question li:hover {
+  border-bottom: 1px solid $blue;
+}
+
+.mamrotki-test .button {
+  min-width: 15%;
+}
+
+.mamrotki-test .world-link {
   background-color: $yellow;
   font-family: $font-maya;
   text-transform: none;
@@ -312,7 +329,7 @@ h1 {
   text-align: center;
 }
 
-.mamrotki-test .world-link::before{
+.mamrotki-test .world-link::before {
   background-color: $blue;
 }
 
@@ -333,11 +350,7 @@ h1 {
 .button:hover {
   @for $i from 1 through 50 {
     i:nth-of-type(#{$i}) {
-      transform: translate3d(
-          random(190) - 100 + px,
-          random(200) - 100 + px,
-          0
-        )
+      transform: translate3d(random(190) - 100 + px, random(200) - 100 + px, 0)
         rotate(random(360) + deg);
       background: hsla(random(360), 100%, 50%, 1);
       animation: bang 700ms ease-out forwards;
@@ -347,12 +360,245 @@ h1 {
 }
 
 @keyframes bang {
-from {
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-}
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-.choosed{
-  border-bottom: 1px solid $light-pink;
+.anonim-score {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/*media queries*/
+
+@media (max-width: 1355px) {
+  .p-hint {
+    font-size: 24px;
+    width: 40vw;
+  }
+
+  .mamrotki-test {
+    margin-top: 350px;
+  }
+}
+
+@media (max-width: 950px) {
+  .p-hint {
+    font-size: 20px;
+  }
+  .mamrotki-test {
+    margin-top: 300px;
+  }
+  #test {
+    padding: 100px 50px;
+  }
+}
+
+@media (max-width: 850px) {
+  .welcome {
+    width: 80%;
+  }
+
+  .oval-background,
+  .oval-bottom {
+    max-width: 70%;
+  }
+
+  .oval-bottom {
+    transform: translateY(-10%);
+  }
+
+  .mamrotki-map {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .mamrotki-test {
+    margin: 300px 50px 50px 50px;
+  }
+
+  #test {
+    padding: 100px 20px;
+  }
+  .img-hint {
+    width: 40vw;
+  }
+  .p-hint {
+    top: -120px;
+  }
+
+  .question,
+  .question:nth-child(2n) {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .oval-3 {
+    left: -15%;
+  }
+
+  .oval-1 {
+    right: 3%;
+  }
+  .oval-bottom {
+    transform: translateY(-16%);
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .welcome-title {
+    font-size: 20px;
+  }
+
+  .welcome-caption {
+    font-size: 19px;
+  }
+
+  .mamrotki-map {
+    height: 40vh;
+  }
+
+  #test {
+    padding: 50px 20px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .p-hint {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .oval-3 {
+    height: 200px;
+    top: 30%;
+  }
+
+  .oval-background {
+    padding: 0 50px;
+  }
+
+  .welcome {
+    padding: 40px;
+  }
+
+  .oval-bottom {
+    transform: translateY(-20%);
+  }
+
+  .img-hint {
+    width: 50vw;
+  }
+
+  .p-hint {
+    top: -100px;
+    width: 60vw;
+  }
+
+  .question {
+    flex-direction: column;
+  }
+
+  .question-img {
+    height: 150px;
+    order: 1;
+  }
+
+  .question-img::after {
+    content: '';
+    width: 10px;
+    height: 20px;
+    background-image: url(../../images/oval-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .oval-bottom {
+    transform: translateY(-30%);
+  }
+  .mamrotki-map{
+    margin: 0 20px;
+  }
+  .mamrotki-test{
+    margin: 150px 20px 20px 20px;
+  }
+  .img-hint{
+    top: -70px;
+  }
+  .p-hint{
+    top: -90px;
+  }
+
+  .create-user p:nth-of-type(2n),
+  .create-user input{
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 350px){
+  .p-hint{
+    font-size: 16px;
+
+  }
+  .question{
+    font-size: 16px;
+  }
+}
+
+/* for landscape screen rotation in mobile and tablets*/
+
+@media (max-width: 800px) and (orientation: landscape){
+  .mamrotki-map{
+    height: 100vh;
+  }
+
+  .map-container{
+    max-height: 120vh;
+  }
+
+  .question-img{
+    min-width: 30%;
+  }
+
+  .create-user p{
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .create-user p:nth-of-type(2n){
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .create-user .button{
+    margin: 10px;
+  }
+  .create-user .world-link{
+    padding: 25px;
+  }
+
+  .create-user input{
+    margin: 10px;
+    height: 40px;
+  }
+
 }

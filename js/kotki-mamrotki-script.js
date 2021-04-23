@@ -59,7 +59,7 @@
                 });
             }
 
-            const submitTestBtn = document.querySelector('.button');
+            const submitTestBtn = document.querySelector('.mamrotki-test .button');
             submitTestBtn.addEventListener('click', function (event) {
                 event.preventDefault();
                 app.data.points.push(pointsForQuestion);
@@ -69,9 +69,12 @@
 
     class User {
         constructor(id, points) {
-            this.id = id;
-            this.points = points;
+            app.data.users[id] = points;
+            delete app.data.name;
+            delete app.data.points;
             console.log('THIS USER:', this);
+            console.log(app.data);
+
         }
     }
 
@@ -79,7 +82,9 @@
         initData: function () {
             this.data = dataSource;
             this.data.points = [];
+            this.data.users = {};
         },
+
 
         initTest: function () {
 
@@ -92,16 +97,22 @@
             const img = document.querySelector('.img-hint');
             const caption = document.querySelector('.p-hint');
 
-            gsap.set(img, { y: '-550' });
+            let distance = -0.9 * img.clientWidth ;
+            console.log(distance);
+            let distanceCap = -0.4 * caption.clientHeight ;
+            let widthCap = -1.5 * caption.clientWidth ;
 
-            gsap.fromTo(img, { x: '-700' }, {
-                x: '0', ease: 'easeInOut', duration: 2, scrollTrigger: {
+            gsap.set(img, { y:distance});
+            gsap.set(caption, {y: distanceCap});
+
+            gsap.fromTo(img, { x: widthCap }, {
+                x: '-5%', ease: 'easeInOut', duration: 2, scrollTrigger: {
                     trigger: img,
                     start: 'top 45%',
                 }
             });
-            gsap.fromTo(caption, { x: '-700' }, {
-                x: '0', ease: 'easeInOut', duration: 2, scrollTrigger: {
+            gsap.fromTo(caption, { x: widthCap }, {
+                x: '-5%', ease: 'easeInOut', duration: 2, scrollTrigger: {
                     trigger: img,
                     start: 'top 45%'
                 }
@@ -112,25 +123,59 @@
             const confirmUserBtn = document.querySelector('.confirm-user');
             const userInput = document.querySelector('.create-user input');
             const userDiv = document.querySelector('.create-user');
+            const anonimBtn = document.querySelector('.anonymous');
+            const anonimScore = document.querySelector('.anonim-score');
+            const btnContent = document.querySelector('.mamrotki-test .world-link span');
+            const welcomeUsrName = document.querySelector('.welcome-caption span');
+            const testHint = document.querySelector('.p-hint');
 
             confirmUserBtn.addEventListener('click', function () {
+
+                //walidacja wypelnionego pola
+                if(!userInput.value){
+                    window.alert('podaj imię w prosotkątnym polu, lub jeśli chcesz wejść anonimowo kliknij dolny przycisk SIUP');
+                // }else if(userInput.value === Ania || Anna ){
+                //     window.alert('tych mamy dużo w stadzie, podaj jakieś specyficzne cechy'); //need fixing !
+                //     userInput.value = "";
+                }else{
                 app.data.name = userInput.value;
-                document.querySelector('.welcome-caption span').innerHTML = app.data.name;
-                userDiv.style.display = "none";
+                welcomeUsrName.innerHTML = app.data.name;
+                userDiv.style.top = "-100%";
+                anonimScore.style.display = "none";
                 console.log('mamy imie', app.data.name);
+                testHint.innerText = "Pst! Tylko jedna odpowiedź jest prawidłowa, wróć na stronę główną by sprawdzić swój wynik!";
+                document.querySelector('body').style.overflowY = "auto";
+                }
+            });
+
+            anonimBtn.addEventListener('click', function () {
+                userDiv.style.top = "-100%";
+                btnContent.innerText = 'dej wynik';
+                testHint.innerText = "Pssst! Tylko jedna z odpowiedzi jest prawidłowa, powodzenia !";
+                document.querySelector('body').style.overflowY = "auto";
             });
 
         },
 
-        createUser: function () {
-            const submitTestBtn = document.querySelector('.button');
-
+        createUser: function () { //or show points for anonims
+            const submitTestBtn = document.querySelector('.mamrotki-test .button');
+            const anonimScore = document.querySelector('.anonim-score');
+            const btnContent = document.querySelector('.mamrotki-test .world-link span');
+            
             submitTestBtn.addEventListener('click', function (event) {
+
                 event.preventDefault();
                 let numOr0 = n => isNaN(n) ? 0 : n
                 app.data.points = app.data.points.reduce((a, b) => numOr0(a) + numOr0(b));
-                new User(app.data.name, app.data.points);
-                console.log(app.data);
+                if (app.data.name) {
+                    new User(app.data.name, app.data.points);
+                    // window.location = 'http://google.pl'; change for mayasworlds.com
+                } else {
+                    anonimScore.innerHTML += app.data.points;
+                    btnContent.style.fontSize = "24px";
+                    btnContent.innerText = 'druga szansa po odświeżeniu kotku';
+                    submitTestBtn.style.pointerEvents = "none";
+                }
             });
         },
 

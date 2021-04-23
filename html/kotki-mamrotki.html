@@ -13,9 +13,15 @@
   </head>
   <body>
     <div class="create-user">
+      <p>podaj imię i daj się zapamiętać...</p>
       <input type="text">
-      <p>podaj imie i wskakuj</p>
-      <button class="confirm-user">come in</button>
+      <div class="button confirm-user">
+        <a href="#" class="world-link"><span>hops</span></a>
+      </div>
+      <p>lub wskakuj anonimowo!</p>
+      <div class="button anonymous">
+        <a href="#" class="world-link"><span>siup</span></a>
+      </div>
     </div>
     <section class="home">
       <img src="../images/oval-1.png" class="oval-1" />
@@ -27,7 +33,7 @@
       </div>
       <div class="welcome">
         <p class="welcome-caption">
-          Witaj <span>/usr name/</span> w świecie kotków mamrotków, niedługo będziesz musiał
+          Witaj <span></span> w świecie kotków mamrotków, niedługo będziesz musiał
           odpowiedzieć sobie na kilka pytań. Nie martw się, nie będą one
           dotyczyły Ciebie (po co tu jesteś? dokąd zmierzasz? jaki jest sens
           wszystkiego?) tylko - tak, zgadłeś, kotów mamrotów. Przyjrzyj się
@@ -58,10 +64,11 @@
     </section>
     <section class="mamrotki-test">  
         <img src="../images/oval-2.png" class="img-hint">
-        <p class="p-hint">Pst ! Tylko jedna odpowiedź jest prawidłowa, po wypełnienu testu wyślij odpowiedzi i wróć na główną stronę by sprawdzić swój wynik!</p>
+        <p class="p-hint"></p>
       <div id="test">
         <!-- here will be handlebars generated templates filled with our data in js -->
       </div>
+      <p class="anonim-score">twoj wynik to : </p>
       <div class="button">
        <a href="../index.html" class="world-link"><span>no to siup!</span></a>
        <i></i>
@@ -129,7 +136,7 @@
           <p>{{caption}}</p>
           <ul>
             {{#each options}}
-            <li><span>{{@key}}</span> {{this.[0]}}</li>
+            <li><span>{{@key}}</span>  {{this.[0]}}</li>
             {{/each}}
           </ul>
         </div>

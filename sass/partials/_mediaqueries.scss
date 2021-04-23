@@ -1,0 +1,218 @@
+
+/*media queries*/
+
+@media (max-width: 1280px ){
+  .sisters-caption{
+    font-size: 30px;
+    line-height: 40px;
+    top: 30%;
+  }
+}
+
+@media (max-width: 1000px ){
+
+    .worlds{
+      margin: 300px 0 100px 0;
+    }
+  
+    .worlds-top{
+      transform: translateY(-95%);
+    }
+  
+    .worlds-container .button{
+      width: 200px;
+    }
+  
+    .sisters-container{
+      width: 80%;
+      margin: 20px;
+    }
+    .sisters-caption{
+      font-size: 24px;
+      line-height: 40px;
+      top: 30%;
+    }
+  
+}
+
+
+
+@media (max-width: 767px ){
+
+    .oval-background{
+      max-width: 80%;
+    }
+    .oval-3{
+      height: 33%;
+    }
+    .welcome-caption{
+      padding-bottom: 8%;
+    }
+    .worlds{
+      padding-top:50px;
+    }
+    .sisters{
+      height: 80vh;
+    }
+    
+    .sisters-caption{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+}
+
+/* for landscape screen rotation in mobile and tablets*/
+
+@media (max-width: 800px) and (orientation: landscape){
+
+  .home{
+    min-height: 180vh;
+  }
+
+  .oval-1{
+    top: 95%;
+  }
+
+  .worlds{
+    min-height: 200vh;
+  }
+
+  .worlds-container{
+    padding: 50px 0;
+  }
+
+  .worlds .world-link {
+    padding: 30px;
+  }
+
+  .worlds .world-link span{
+    font-size: 18px;
+  }
+
+  .sisters{
+    height: 180vh;
+  }
+
+  .sisters .sisters-container{
+    width: 70%;
+  }
+
+
+}
+
+  @media (max-width: 650px){
+
+    .worlds-top{
+      transform: translateY(-93%);
+    }
+    
+    .oval-1{
+      left: 55%;
+    }
+
+    .oval-2{
+      top: 20%;
+      left: -20%;
+    }
+
+    .oval-3{
+      top: 13%;
+    }
+
+  }
+
+  @media (max-width: 580px){
+    
+    h2{
+      font-size: 15px;
+    }
+
+    h1{
+      font-size: 35px;
+    }
+    h3{
+      font-size: 25px;
+    }
+    .oval-background{
+      width: 80%;
+      padding: 0 75px;
+    }
+    .world-link{
+      font-size: 15px;
+      padding: 20px;
+    }
+
+    .welcome{
+      margin: 0 40px 40px 40px;
+    }
+    .welcome-caption{
+      font-size: 20px;
+      padding-bottom: 13%;
+    }
+
+    .worlds{
+      margin: 150px 0 100px 0;
+    }
+
+    .users{
+      margin: 0 40px;
+    }
+    .sisters-caption{
+      font-size: 20px;
+      line-height: 30px;
+      top: 30%;
+      left: 15%;
+    }
+
+    footer{
+      padding: 10px;
+      font-size: 15px;
+    }
+    footer span {
+      font-size: 15px;
+    }
+
+
+    //worlds top translate 
+  }
+
+  @media (max-width: 470px){
+    .oval-background{
+      padding: 0 50px;
+    }
+
+    h1{
+      font-size: 30px;
+    }
+
+    h1::after{
+      height: 30px;
+    }
+
+    h3{
+      margin: 0 15px;
+      font-size: 23px;
+    }
+ 
+  
+  }
+
+  @media (max-width: 440px){
+
+    .worlds{
+      min-height: 90vh;
+    }
+
+    .oval-background{
+      padding: 0 30px;
+    }
+
+    .sisters-caption{
+      font-size: 18px;
+      top: 33%;
+      line-height: 18px;
+      left: 20%;
+    }
+  }
+
