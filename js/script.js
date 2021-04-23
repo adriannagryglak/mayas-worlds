@@ -55,6 +55,7 @@
             const text = "Maya's Worlds"; // /n is for slicing midline, not working in this case
 
             function typeing() {
+                typeingTitle.innerText= "";
 
                 let letter = text.slice(0, ++index);
                 typeingTitle.textContent = letter;
