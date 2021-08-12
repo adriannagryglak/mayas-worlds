@@ -100,22 +100,46 @@ dataSource.questions = {
     },
 }
 
+dataSource.family = [
+    {
+        name: "ada",
+        caption: "Ada jak to mówią, nie wypada ale krótkie przypomnienie- w tym świecie wypada wszystko!"
+    },
+    {
+        name: "patryk",
+        caption: 'Brzmi jak połączenie papryki i patyka, a tak naprawdę to najfajniejszy chłopak jest!'
+    },
+    {
+        name: "witek",
+        caption: 'Czym tym razem zaskoczy Cię Twoja córka... a raczej córki? Podpowiedź specjalnie dla Taty, macie z drugim mamrotkiem wspólne zainteresowania! '
+    },
+    {
+        name: "agata",
+        caption: 'Agatki to najwspanialsze matki, rodzą wyjątkowo zdolne gagatki.'
+    },
+    {
+        name: "agnieszka",
+        caption: 'Twoje imię brzmi jak świetny materiał na Ciocię, a nawet Redaktor Naczelną!'
+    },
+
+]
+
 dataSource.mayasworlds = {
-    texts : {
+    texts: {
         welcomeTitle: '',
         detailTitle: '',
         title: '',
-        welcomeCaption : '',
-        worldsCaption : '',
+        welcomeCaption: '',
+        worldsCaption: '',
         sistersCaption: '',
     },
-    images : {
+    images: {
         oval1: '',
         oval2: '',
         oval3: '',
         sistersImg: '',
         sisersKopuly: '',
-        
+
 
     }
 }

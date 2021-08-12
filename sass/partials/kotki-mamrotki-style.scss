@@ -116,8 +116,9 @@ h1 {
   animation: appear 1s linear 1s both;
 }
 
-.welcome-caption span {
+.welcome-caption .family-name {
   font-family: $font-maya;
+  text-transform: capitalize;
 }
 
 .oval-bottom {

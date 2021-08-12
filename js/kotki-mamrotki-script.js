@@ -124,10 +124,8 @@
             const userInput = document.querySelector('.create-user input');
             const userDiv = document.querySelector('.create-user');
             const anonimBtn = document.querySelector('.anonymous');
-            const anonimScore = document.querySelector('.anonim-score');
-            const btnContent = document.querySelector('.mamrotki-test .world-link span');
-            const welcomeUsrName = document.querySelector('.welcome-caption span');
-            const testHint = document.querySelector('.p-hint');
+            const welcomeUsrName = document.querySelector('.welcome-caption .family-name');
+            const welcomeUsrCaption = document.querySelector('.welcome-caption .family-cap');
 
             confirmUserBtn.addEventListener('click', function () {
 
@@ -138,26 +136,29 @@
                 //     window.alert('tych mamy dużo w stadzie, podaj jakieś specyficzne cechy'); //need fixing !
                 //     userInput.value = "";
                 }else{
-                app.data.name = userInput.value;
+
+                app.data.name = userInput.value.toLowerCase();
                 welcomeUsrName.innerHTML = app.data.name;
+                // dodac tekst specyficzny dla inputu 
+                    for (member in dataSource.family){
+                        if(app.data.name == dataSource.family[member].name){
+                            welcomeUsrCaption.innerHTML = dataSource.family[member].caption;
+                        }
+                    }
+            
                 userDiv.style.top = "-100%";
-                anonimScore.style.display = "none";
-                console.log('mamy imie', app.data.name);
-                testHint.innerText = "Pst! Tylko jedna odpowiedź jest prawidłowa, wróć na stronę główną by sprawdzić swój wynik!";
                 document.querySelector('body').style.overflowY = "auto";
                 }
             });
 
             anonimBtn.addEventListener('click', function () {
                 userDiv.style.top = "-100%";
-                btnContent.innerText = 'dej wynik';
-                testHint.innerText = "Pssst! Tylko jedna z odpowiedzi jest prawidłowa, powodzenia !";
                 document.querySelector('body').style.overflowY = "auto";
             });
 
         },
 
-        createUser: function () { //or show points for anonims
+        showPoints: function () { //or show points for anonims
             const submitTestBtn = document.querySelector('.mamrotki-test .button');
             const anonimScore = document.querySelector('.anonim-score');
             const btnContent = document.querySelector('.mamrotki-test .world-link span');
@@ -167,15 +168,12 @@
                 event.preventDefault();
                 let numOr0 = n => isNaN(n) ? 0 : n
                 app.data.points = app.data.points.reduce((a, b) => numOr0(a) + numOr0(b));
-                if (app.data.name) {
-                    new User(app.data.name, app.data.points);
-                    // window.location = 'http://google.pl'; change for mayasworlds.com
-                } else {
+
                     anonimScore.innerHTML += app.data.points;
                     btnContent.style.fontSize = "24px";
                     btnContent.innerText = 'druga szansa po odświeżeniu kotku';
                     submitTestBtn.style.pointerEvents = "none";
-                }
+                
             });
         },
 
@@ -183,7 +181,7 @@
             this.initData();
             this.initTest();
             this.getName();
-            this.createUser();
+            this.showPoints();
         }
     }
 
