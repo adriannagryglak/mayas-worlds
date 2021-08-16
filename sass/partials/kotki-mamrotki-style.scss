@@ -259,6 +259,7 @@ h1 {
   margin: 20px;
   padding: 10px;
   display: flex;
+  user-select: none;
 }
 
 .question:nth-child(2n) {
@@ -372,6 +373,42 @@ h1 {
   font-size: 24px;
 }
 
+.anonim-score span{
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+@keyframes order-pop{
+  0%{
+    transform: translate(0,0) scale(0) rotate(0deg) ;
+  }
+  50%{
+    transform: translate(0,-200%) scale(5) rotate(15deg);
+  }
+  80%{
+    transform: translate(200%,-300%) scale(5) rotate(90deg);
+  }
+  100%{
+    transform: translate(800%, -600%) scale(2) rotate(360deg);
+  }
+}
+
+.order-container{
+  height: 10vh;
+}
+
+.order-container img{
+  display: none;
+  position: relative;
+  height: 100%;
+  z-index: 10;
+}
+
+.order-container .order-animate{
+  animation: order-pop 8s 2s linear both;
+}
+
+
 /*media queries*/
 
 @media (max-width: 1355px) {
@@ -435,6 +472,7 @@ h1 {
   .question:nth-child(2n) {
     padding: 0;
   }
+
 }
 
 @media (max-width: 600px) {

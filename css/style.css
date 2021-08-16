@@ -1114,12 +1114,6 @@ footer span {
   padding: 20px 0;
 }
 
-.users {
-  height: 50vh;
-  background-color: white;
-  margin: 0 80px 100px 80px;
-}
-
 /*variables*/
 @font-face {
   font-family: 'maja7regular';

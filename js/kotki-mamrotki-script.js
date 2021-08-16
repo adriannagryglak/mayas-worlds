@@ -160,8 +160,9 @@
 
         showPoints: function () { //or show points for anonims
             const submitTestBtn = document.querySelector('.mamrotki-test .button');
-            const anonimScore = document.querySelector('.anonim-score');
+            const anonimScore = document.querySelector('.anonim-score span');
             const btnContent = document.querySelector('.mamrotki-test .world-link span');
+            const orderImg = document.querySelector('.order-container img');
             
             submitTestBtn.addEventListener('click', function (event) {
 
@@ -169,9 +170,20 @@
                 let numOr0 = n => isNaN(n) ? 0 : n
                 app.data.points = app.data.points.reduce((a, b) => numOr0(a) + numOr0(b));
 
-                    anonimScore.innerHTML += app.data.points;
+                    anonimScore.innerHTML = app.data.points;
                     btnContent.style.fontSize = "24px";
-                    btnContent.innerText = 'druga szansa po odświeżeniu kotku';
+                    if(app.data.points <10 && app.data.points >5 ){
+                        btnContent.innerText = 'gratulacje  kotku!';
+                    }else if(app.data.points === 10){
+                        btnContent.innerText = 'Brawo! Uroczyście przyznajemy Ci order oraz chwałę i sławę, na wieki.';
+                        
+                    }
+                    else{
+                        btnContent.innerText = 'mogło być lepiej, miau';
+                        orderImg.style.display = "block";
+                        orderImg.classList.add('order-animate');
+                    }
+                    
                     submitTestBtn.style.pointerEvents = "none";
                 
             });
