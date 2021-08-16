@@ -1,0 +1,1 @@
+console.log('jesteś na szalonych maszynach');
