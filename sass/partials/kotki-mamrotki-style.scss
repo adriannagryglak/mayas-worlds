@@ -12,7 +12,7 @@
 $font-maya: 'maja7regular', serif;
 
 body{
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 /* home */
@@ -389,7 +389,7 @@ h1 {
     transform: translate(200%,-300%) scale(5) rotate(90deg);
   }
   100%{
-    transform: translate(800%, -600%) scale(2) rotate(360deg);
+    transform: translate(1000%, -600%) scale(2) rotate(360deg);
   }
 }
 
@@ -584,7 +584,8 @@ h1 {
     top: -70px;
   }
   .p-hint{
-    top: -90px;
+    top: -70px;
+    font-size: 16px
   }
 
   .create-user p:nth-of-type(2n),
@@ -594,10 +595,7 @@ h1 {
 }
 
 @media (max-width: 350px){
-  .p-hint{
-    font-size: 16px;
-
-  }
+  
   .question{
     font-size: 16px;
   }

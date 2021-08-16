@@ -176,12 +176,11 @@
                         btnContent.innerText = 'gratulacje  kotku!';
                     }else if(app.data.points === 10){
                         btnContent.innerText = 'Brawo! Uroczyście przyznajemy Ci order oraz chwałę i sławę, na wieki.';
-                        
+                        orderImg.style.display = "block";
+                        orderImg.classList.add('order-animate');
                     }
                     else{
                         btnContent.innerText = 'mogło być lepiej, miau';
-                        orderImg.style.display = "block";
-                        orderImg.classList.add('order-animate');
                     }
                     
                     submitTestBtn.style.pointerEvents = "none";
