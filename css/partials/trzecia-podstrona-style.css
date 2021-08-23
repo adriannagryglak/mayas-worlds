@@ -59,10 +59,56 @@ h1 {
   margin: 0 50px;
   text-align: center;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-  align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/

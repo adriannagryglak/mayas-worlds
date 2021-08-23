@@ -11,6 +11,8 @@
   .oval-background {
     height: 100%;
     animation: showfromup 2s cubic-bezier(.37,.31,.5,1.52) forwards;
+    
+    justify-content: flex-end;
   }
   
   h1{

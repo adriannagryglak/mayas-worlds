@@ -70,51 +70,8 @@ h1 {
   font-size: 45px;
 }
 
-.welcome-title {
-  margin-top: 50%;
-}
+/* welcome */
 
-.welcome-title,
-.detail-title {
-  text-transform: none;
-  font-size: 24px;
-}
-
-.detail-title {
-  margin-bottom: 50%;
-  position: relative;
-}
-
-.detail-title::before,
-.detail-title::after {
-  position: absolute;
-  content: '';
-  background-color: black;
-  width: 15px;
-  height: 1px;
-  top: 55%;
-}
-
-.detail-title::before {
-  transform: translateX(-150%);
-}
-
-.detail-title::after {
-  transform: translateX(50%);
-}
-
-.welcome {
-  background-color: white;
-  width: 60%;
-  padding: 80px;
-  margin: 0 auto;
-}
-
-.welcome-caption {
-  font-family: $font-text;
-  font-size: 25px;
-  animation: appear 1s linear 1s both;
-}
 
 .welcome-caption .family-name {
   font-family: $font-maya;

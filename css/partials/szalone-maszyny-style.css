@@ -59,10 +59,56 @@ h1 {
   margin: 0 50px;
   text-align: center;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-  align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
@@ -233,12 +279,287 @@ footer span {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 section {
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 0px 0 100px 0;
+  position: relative;
+}
+
+h1, h2 {
+  animation: appear 2s;
+}
+
+.oval-background {
+  position: absolute;
+  height: 60%;
+  top: 100px;
+  border-radius: 200px 200px 0 0;
+  background: linear-gradient(-200deg, white 50%, #e8dfd8);
+  z-index: -1;
+  justify-content: flex-start;
+}
+
+.welcome {
+  background-color: #e6c8c5;
+}
+
+svg {
+  width: 105vw;
+  max-width: 1500px;
+  margin: 400px 0 100px 0;
+  z-index: 1;
+}
+
+.tulip {
+  transform: rotate(-15deg);
+  transform-origin: center;
+}
+
+.banana-filling .left {
+  fill: #b6dce4;
+}
+
+.banana-filling .right {
+  fill: #c3d2c2;
+}
+
+.ball-filling .ball {
+  fill: #e6c8c5;
+}
+
+.ball-filling .snail {
+  fill: #DFAE80;
+}
+
+.ball-filling .hand {
+  fill: #BD937B;
+}
+
+.ball-filling .upper {
+  fill: #B3BD98;
+}
+
+.flower .middle {
+  fill: #c3d2c2;
+}
+
+.stripes-filling path {
+  fill: #C38274;
+}
+
+.snaily-eyeball .filling {
+  fill: #dddbdb;
+}
+
+.snaily-eyeball .filling-snail {
+  fill: #836090;
+}
+
+.tulip .filling .upper {
+  fill: #C2A7CC;
+}
+
+.tulip .filling .long {
+  fill: #836090;
+}
+
+.tulip .filling .lower {
+  fill: #EBC5D5;
+}
+
+.small-flower .middle {
+  fill: #f7ebb1;
+}
+
+.small-flower .petal {
+  fill: #EBC5D5;
+}
+
+.heart-big .filling,
+.heart-small .filling {
+  fill: #E5C9AF;
+}
+
+.cactuses .filling {
+  fill: #88AC94;
+}
+
+.cactuses .lil-ball-filling {
+  fill: #DFAE80;
+}
+
+.cactus-flowers .flower-middle {
+  fill: #E5C9AF;
+}
+
+.cactus-flowers .petal {
+  fill: #CB6E95;
+}
+
+.snake-leaf-filling .snake {
+  fill: #d9b2ac;
+}
+
+.snake-leaf-filling .filling {
+  fill: #CB6E95;
+}
+
+.snake-leaf-filling .flower {
+  fill: #f7ebb1;
+}
+
+.snake-leaf-filling .leaf {
+  fill: #b6dce4;
+}
+
+.snake-leaf-filling .leaf-right {
+  fill: #88AC94;
+}
+
+.static-alien-filling .eye-fill {
+  fill: #86C5D2;
+}
+
+.static-alien-filling .lip {
+  fill: #DCD2DF;
+}
+
+.static-alien-filling .part-1 {
+  fill: #7C95D2;
+}
+
+.static-alien-filling .part-2 {
+  fill: #e6c8c5;
+}
+
+.static-alien-filling .part-3 {
+  fill: #DFAE80;
+}
+
+.static-alien-filling .part-4 {
+  fill: #c3d2c2;
+}
+
+.czujki .filling,
+.huge-stems .upper-stem {
+  fill: #b6dce4;
+}
+
+.huge-stems .cactus-stem {
+  fill: #f7ebb1;
+}
+
+.huge-stems .stem {
+  fill: #E8E3B4;
+}
+
+.octopus .head {
+  fill: #E5C9AF;
+}
+
+.octopus .outer-tong {
+  fill: #EBC5D5;
+}
+
+.octopus .middle-tong {
+  fill: #CB6E95;
+}
+
+.octopus .inner-tong {
+  fill: #DFAE80;
+}
+
+.octopus .blue {
+  fill: #7C95D2;
+}
+
+.octopus .green {
+  fill: #88AC94;
+}
+
+.trybiki .filling {
+  fill: #BBB7B7;
+}
+
+.trybiki .filling-middle {
+  fill: #dddbdb;
+}
+
+.leaves .filling {
+  fill: #B3BD98;
+}
+
+.little-creatures .right-filling {
+  fill: #C38274;
+}
+
+.little-creatures .left-filling {
+  fill: #DFAE80;
+}
+
+.robo-worm .head-filling {
+  fill: #DFAE80;
+}
+
+.robo-worm .eye-filling {
+  fill: #BBB7B7;
+}
+
+.robo-worm .box-1 {
+  fill: #b6dce4;
+}
+
+.robo-worm .box-2 {
+  fill: #e6c8c5;
+}
+
+.robo-worm .box-3 {
+  fill: #836090;
+}
+
+.robo-worm .box-4 {
+  fill: #c3d2c2;
+}
+
+.robo-worm .box-6 {
+  fill: #CB6E95;
+}
+
+.avo-onion .outer {
+  fill: #E5C9AF;
+}
+
+.avo-onion .middle {
+  fill: #DFAE80;
+}
+
+.avo-onion .pestka-filling {
+  fill: #f7ebb1;
+}
+
+.wheel .tire-filling {
+  fill: #B3BD98;
+}
+
+.wheel .inner-filling {
+  fill: #CFDFE2;
+}
+
+.wheel .cross-filling {
+  fill: #C38274;
+}
+
+.wheel .filling-1 {
+  fill: #f7ebb1;
+}
+
+.wheel .filling-2 {
+  fill: #DFAE80;
 }
 
 /*# sourceMappingURL=szalone-maszyny-style.css.map */

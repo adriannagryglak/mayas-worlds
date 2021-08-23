@@ -12,10 +12,294 @@
 $font-maya: 'maja7regular', serif;
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 section{
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 0px 0 100px 0;
+    position: relative;
 }
+
+h1,h2{
+  animation: appear 2s;
+}
+
+.oval-background {
+  position: absolute;
+  height: 60%;
+  top: 100px;
+  border-radius: 200px 200px 0 0;
+  background: linear-gradient(-200deg, white 50%, $beige);
+  z-index: -1;
+  justify-content: flex-start;
+}
+
+.welcome{
+  background-color: $light-pink;
+}
+
+svg{
+  width: 105vw;
+  max-width: 1500px;
+  margin: 400px 0 100px 0;
+  z-index: 1;
+  //width: 100%;
+  //position: absolute; doesnt make a diffrence
+}
+
+//coloring svg-intro
+
+.tulip{
+  transform: rotate(-15deg);
+  transform-origin: center;
+}
+
+.banana-filling .left{
+  fill: $blue;
+}
+
+.banana-filling .right{
+  fill: $green;
+}
+
+.ball-filling .ball{
+  fill: $light-pink;
+}
+
+.ball-filling .snail{
+  fill: $orange;
+}
+
+.ball-filling .hand{
+  fill: $brown;
+}
+
+.ball-filling .upper{
+  fill: $green-olive;
+}
+
+.flower .middle{
+  fill: $green;
+}
+
+.stripes-filling path{
+  fill: $orange-dark;
+}
+
+.snaily-eyeball .filling{
+  fill: $grey-light;
+}
+
+.snaily-eyeball .filling-snail{
+  fill: $violet-dark;
+}
+
+.tulip .filling .upper {
+  fill: $violet;
+}
+
+.tulip .filling .long{
+  fill: $violet-dark;
+}
+
+.tulip .filling .lower {
+  fill: $vibrant-pink-light;
+}
+
+.small-flower .middle{
+  fill: $yellow;
+}
+
+.small-flower .petal{
+fill: $vibrant-pink-light;
+}
+
+.heart-big .filling,
+.heart-small .filling{
+  fill: $orange-light;
+}
+
+.cactuses .filling{
+  fill: $green-dark;
+}
+
+.cactuses .lil-ball-filling{
+  fill: $orange;
+}
+
+.cactus-flowers .flower-middle{
+  fill: $orange-light;
+}
+
+.cactus-flowers .petal{
+  fill: $vibrant-pink-dark;
+}
+
+.snake-leaf-filling .snake{
+  fill : $dark-pink;
+}
+
+.snake-leaf-filling .filling{
+  fill : $vibrant-pink-dark;
+}
+
+.snake-leaf-filling .flower{
+  fill : $yellow;
+}
+
+.snake-leaf-filling .leaf{
+  fill : $blue;
+}
+
+.snake-leaf-filling .leaf-right{
+  fill : $green-dark;
+}
+
+.static-alien-filling .eye-fill{
+  fill: $blue-sea;
+}
+
+.static-alien-filling .lip{
+  fill: $violet-light;
+}
+
+.static-alien-filling .part-1{
+  fill: $blue-dark;
+}
+
+.static-alien-filling .part-2{
+  fill: $light-pink;
+}
+
+.static-alien-filling .part-3{
+  fill: $orange;
+}
+
+.static-alien-filling .part-4{
+  fill: $green;
+}
+
+.czujki .filling,
+.huge-stems .upper-stem{
+  fill: $blue;
+}
+
+.huge-stems .cactus-stem{
+  fill: $yellow;
+}
+
+.huge-stems .stem{
+fill: $yellow-dark;
+}
+
+.octopus .head{
+  fill: $orange-light;
+}
+
+.octopus .outer-tong{
+  fill: $vibrant-pink-light;
+}
+
+
+.octopus .middle-tong{
+  fill: $vibrant-pink-dark;
+}
+
+.octopus .inner-tong{
+  fill: $orange;
+}
+
+.octopus .blue{
+  fill: $blue-dark;
+}
+
+.octopus .green{
+  fill: $green-dark;
+}
+
+.trybiki .filling{
+  fill: $grey;
+}
+
+.trybiki .filling-middle{
+  fill: $grey-light;
+}
+
+.leaves .filling{
+  fill: $green-olive;
+}
+
+.little-creatures .right-filling{
+  fill: $orange-dark;
+}
+
+.little-creatures .left-filling{
+  fill: $orange;
+}
+
+.robo-worm .head-filling{
+  fill: $orange;
+}
+
+.robo-worm .eye-filling{
+  fill: $grey;
+}
+
+.robo-worm .box-1{
+  fill: $blue;
+}
+
+.robo-worm .box-2{
+  fill: $light-pink;
+}
+
+.robo-worm .box-3{
+  fill: $violet-dark;
+}
+
+.robo-worm .box-4{
+  fill: $green;
+}
+
+.robo-worm .box-6{
+  fill: $vibrant-pink-dark;
+}
+
+.avo-onion .outer{
+  fill : $orange-light;
+}
+
+.avo-onion .middle{
+  fill : $orange;
+}
+
+.avo-onion .pestka-filling{
+  fill : $yellow;
+}
+
+.wheel .tire-filling{
+  fill: $green-olive;
+}
+
+.wheel .inner-filling{
+  fill: $blue-light;
+}
+
+.wheel .cross-filling{
+  fill: $orange-dark;
+}
+
+.wheel .filling-1{
+  fill: $yellow;
+}
+
+.wheel .filling-2{
+  fill: $orange;
+}
+
+
+//media-queries 
+

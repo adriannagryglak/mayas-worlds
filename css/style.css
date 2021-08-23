@@ -61,13 +61,57 @@ h1 {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
@@ -300,13 +344,57 @@ h1 {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
@@ -486,6 +574,8 @@ footer span {
 .oval-background {
   height: 100%;
   animation: showfromup 2s cubic-bezier(0.37, 0.31, 0.5, 1.52) forwards;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 h1 {
@@ -607,13 +697,57 @@ h1 {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
@@ -785,7 +919,6 @@ footer span {
 
 /*welcome*/
 .welcome {
-  background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
@@ -796,7 +929,6 @@ footer span {
 .welcome-caption {
   margin: 8%;
   padding: 6%;
-  font-size: 25px;
   z-index: 2;
 }
 
@@ -879,13 +1011,57 @@ h1 {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
@@ -1177,13 +1353,57 @@ h1 {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
   z-index: 3;
+}
+
+.welcome-title.subp {
+  margin-top: 50%;
+}
+
+.welcome-title.subp,
+.detail-title.subp {
+  text-transform: none;
+  font-size: 24px;
+}
+
+.detail-title.subp {
+  margin-bottom: 50%;
+  position: relative;
+}
+
+.detail-title.subp::before,
+.detail-title.subp::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 1px;
+  top: 55%;
+}
+
+.detail-title.subp::before {
+  transform: translateX(-150%);
+}
+
+.detail-title.subp::after {
+  transform: translateX(50%);
+}
+
+.welcome {
+  background-color: white;
+}
+
+.welcome.subp {
+  width: 60%;
+  padding: 80px;
+  margin: 0 auto;
+}
+
+.welcome-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
 }
 
 /*animations*/
