@@ -278,8 +278,9 @@ footer span {
   font-style: normal;
 }
 
-body {
-  overflow-x: hidden;
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 section {
@@ -308,11 +309,255 @@ h1, h2 {
   background-color: #e6c8c5;
 }
 
-svg {
+.svg-intro {
   width: 105vw;
   max-width: 1500px;
   margin: 400px 0 100px 0;
+  animation: appear 2s;
+}
+
+.welcome-caption.detail {
+  background-color: white;
+}
+
+.game-intro {
   z-index: 1;
+  padding: 0;
+}
+
+.monster-warning {
+  position: absolute;
+  top: 0;
+  margin: 200px 0;
+  background-color: white;
+  padding: 80px;
+  font-size: 25px;
+  width: 50%;
+}
+
+.monster-warning::after {
+  background: url(../../images/szalone-maszyny/zjaj-shape.png);
+  top: 30%;
+  right: -16%;
+  height: 100%;
+  width: 30%;
+}
+
+.monster-warning::before {
+  background: url(../../images/szalone-maszyny/bezjaj-shape.png);
+  top: -30%;
+  left: -20%;
+  z-index: -1;
+  height: 100%;
+  width: 40%;
+}
+
+.monster-warning::after,
+.monster-warning::before {
+  content: '';
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.game {
+  margin-top: 40%;
+}
+
+.svg-game {
+  height: 90vh;
+  width: 95vw;
+}
+
+.game-over-background.game-over {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  animation: appear 1s ease-in;
+}
+
+.game-over-background {
+  width: 0;
+  height: 0;
+}
+
+.game-over-caption {
+  font-size: 34px;
+  z-index: 1000;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.button.button-game-over {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.button.button-game-over .world-link {
+  background-color: #f7ebb1;
+}
+
+.button.button-game-over .world-link span {
+  font-family: "maja7regular", serif;
+  text-transform: none;
+}
+
+.button.button-game-over .world-link::before {
+  background-color: #EBC5D5;
+}
+
+.svg-bezjaj {
+  position: absolute;
+  width: 30vw;
+  transform: scale(0);
+}
+
+.svg-upper-bubbles {
+  width: 100vw;
+  visibility: hidden;
+  position: absolute;
+}
+
+.svg-bubu {
+  transform: scale(0) translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
+.svg-bubu g {
+  opacity: 0;
+}
+
+.small-flower,
+.snake-leaf-filling .fruit,
+.robo-worm,
+.tulip-stem,
+.octopus,
+.cactus-stem,
+#virus,
+.boundries,
+.dymki path,
+.smoke-detectors,
+#start-line {
+  visibility: hidden;
+}
+
+.covit,
+.bakteria-sign,
+.silnik,
+.lampy {
+  opacity: 0;
+}
+
+.dymki path {
+  stroke-dashoffset: 0;
+}
+
+.dymki path.smoke-animate {
+  visibility: visible;
+}
+
+.dymki #smoke1,
+.dymki #smoke4,
+.dymki #smoke5,
+.dymki #smoke6 {
+  stroke-dasharray: 2000;
+}
+
+.dymki #smoke1.smoke-animate,
+.dymki #smoke4.smoke-animate,
+.dymki #smoke5.smoke-animate,
+.dymki #smoke6.smoke-animate {
+  animation: dash-2000 5s linear forwards;
+}
+
+.dymki #smoke2,
+.dymki #smoke7,
+.dymki #smoke8 {
+  stroke-dasharray: 3000;
+}
+
+.dymki #smoke2.smoke-animate,
+.dymki #smoke7.smoke-animate,
+.dymki #smoke8.smoke-animate {
+  animation: dash-3000 5s linear forwards;
+}
+
+.dymki #smoke3,
+.dymki #smoke10 {
+  stroke-dasharray: 1200;
+}
+
+.dymki #smoke3.smoke-animate,
+.dymki #smoke10.smoke-animate {
+  animation: dash-1200 5s linear forwards;
+}
+
+.dymki #smoke9 {
+  stroke-dasharray: 5500;
+}
+
+.dymki #smoke9.smoke-animate {
+  animation: dash-5500 5s linear forwards;
+}
+
+@keyframes dash-1200 {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 2400;
+  }
+}
+
+@keyframes dash-2000 {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 4000;
+  }
+}
+
+@keyframes dash-3000 {
+  from {
+    stroke-dashoffset: 3000;
+  }
+  to {
+    stroke-dashoffset: 6000;
+  }
+}
+
+@keyframes dash-4000 {
+  from {
+    stroke-dashoffset: 4000;
+  }
+  to {
+    stroke-dashoffset: 8000;
+  }
+}
+
+@keyframes dash-5500 {
+  from {
+    stroke-dashoffset: 5500;
+  }
+  to {
+    stroke-dashoffset: 11000;
+  }
 }
 
 .tulip {
@@ -328,7 +573,8 @@ svg {
   fill: #c3d2c2;
 }
 
-.ball-filling .ball {
+.ball-filling .ball,
+.ball-filling .patch {
   fill: #e6c8c5;
 }
 
@@ -561,5 +807,12 @@ svg {
 .wheel .filling-2 {
   fill: #DFAE80;
 }
+
+/*coloring svg-game*/
+.patches path {
+  fill: #e8dfd8;
+}
+
+/*media-queries */
 
 /*# sourceMappingURL=szalone-maszyny-style.css.map */
