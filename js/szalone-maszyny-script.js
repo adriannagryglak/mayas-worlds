@@ -175,26 +175,24 @@
                 }
 
                 //loop over boundries- gameover detectors and finish line behavior
-                tlFinish = gsap.timeline();
-
                 const rects = document.querySelectorAll('.boundries rect');
                 let i = rects.length;
+                
                 while (--i > -1) {
                     if(this.hitTest(rects[i])){
-                        tlFinish.kill(); //have to otherwise could be played
+                        this.kill(); 
                         gsap.to('#virus path', 0.3, {fill: "#D86D66"});
                         gameOver();
-                    } 
+                    }
                 }
-
+                
                 if(this.hitTest('.brain-filling')){
                     t2 = performance.now();
                     gamerTime = (t2-t1)/1000;
-                    winnerIs(gamerTime)
                     gsap.to(this.target, 0.2, {scale: 0, transformOrigin: "50% 50%"});
                     this.kill();
-                    
                     tlBacteria.kill();
+                    tlFinish = gsap.timeline();
                     tlFinish.to('.brain-filling', 0.5, {scale: 1.5, transformOrigin: "50% 50%"})
                     .to('.brain-filling path', 0.3, {fill: '#CB6E95'}, "-=0.2")
                     .to('.brain-filling path', 0.3, {fill: '#f7ebb1'})
@@ -204,8 +202,10 @@
                     .to('.brain-filling path', 0.3, {fill: '#f7ebb1'})
                     .to('.brain-filling path', 0.3, {fill: '#88AC94'})
                     .to('.brain-filling path', 0.3, {fill: '#86C5D2'})
-                    .to('.brain-filling', 0.5, {scale: 1, transformOrigin: "50% 50%"}, "-=0.2");
+                    .to('.brain-filling', 0.5, {scale: 1, transformOrigin: "50% 50%", onComplete: winnerIs, onCompleteParams: [gamerTime]}, "-=0.2");
+                    
                 } 
+            
 
                 //detectors for direction-checking
                 if(this.hitTest('#direction-ok')){
@@ -240,16 +240,16 @@
                 }else{
                         gsap.to('.lampy', 2, {opacity: 0});
                 }
-
-             
             }
         })
     };
   
+    const gameOverBackground = document.querySelector('.game-over-background');
+
     function gameOver(){
+        
         gameOver = function(){}; // kill it as soon as it was called
-        //document.querySelector('body').classList.add('stop-scrolling');
-        const gameOverBackground = document.querySelector('.game-over-background');
+        
         gameOverBackground.classList.add('game-over');
 
         gameOverBackground.addEventListener("animationend", function() {
@@ -257,10 +257,11 @@
             let tlShake = gsap.timeline({repeat: 18, yoyo: true}).fromTo('.svg-bezjaj', 0.3, {rotate:-2, transformOrigin: "50% 50%"}, {rotate:2,transformOrigin: "50% 50%", ease: Power0.easeNone});
             
             let height = window.innerHeight;
-            let heightBubbles = document.querySelector('.svg-upper-bubbles').clientHeight;
-            let tlBezjaj = gsap.timeline({onComplete: showButton});
-            tlBezjaj.set('.svg-upper-bubbles', { x: "25vw", height: "100vh"})
-                .to('.svg-upper-bubbles g', 0.7, {y: height - heightBubbles, visibility: "visible", stagger: 0.2,  ease: Bounce.easeOut})
+            let heightBubbles = document.querySelector('.svg-upper-bubbles-bezjaj').clientHeight;
+            let tlBezjaj = gsap.timeline({onComplete: showButton, onCompleteParams: ["game over.", "lost"]});
+
+            tlBezjaj.set('.svg-upper-bubbles-bezjaj', { x: "25vw", height: "100vh"})
+                .to('.svg-upper-bubbles-bezjaj g', 0.7, {y: height - heightBubbles, visibility: "visible", stagger: 0.2,  ease: Bounce.easeOut})
                 .set('.svg-bezjaj', {scale: 1, height: "100vh", })
                 .add(tlShake, "-=1")
                 .fromTo('.svg-bezjaj', 6, { x: "130vw" }, {x: "40vw", ease: Power0.easeOut}, "<")
@@ -271,47 +272,68 @@
                 .to('.svg-bezjaj .eyes .left, .svg-bezjaj .eyes .right', 1, { delay: 0.5, scale: 2, transformOrigin: "50% 50%"})
                 .to('.svg-bezjaj', 4, { scale: 65, ease: Power1.easeIn, transformOrigin: "36% 48.5%" })
                 .to(gameOverBackground, 1, {background: "#000000"}, "-=1.5" )
-                .set('.svg-upper-bubbles', {opacity: 0}, "-=3");
+                .set('.svg-upper-bubbles-bezjaj', {opacity: 0}, "-=3");
         
-                function showButton(){
-                    const p = document.createElement('p');
-                    p.innerText = "game over."; 
-                    p.classList.add('game-over-caption');
-        
-                    const btn = document.createElement('div');
-                    btn.classList.add('button');
-                    btn.classList.add('button-game-over');
-        
-                    const a = document.createElement('a');
-                    a.classList.add('world-link');
-        
-                    const span = document.createElement('span');
-                    span.innerText= "chcesz jeszcze raz?"
-        
-                    gameOverBackground.appendChild(p);
-                    gameOverBackground.appendChild(btn);
-                    btn.appendChild(a);
-                    a.appendChild(span);
-        
-                   gsap.to('.svg-bubu ', {scale:2.5, x: "-50%", y: "-50%"});
-                   gsap.to('.svg-bubu g', 1, {opacity: 0.7, stagger: 0.7});
-        
-                    btn.addEventListener('click', function(){
-                        location.reload();
-                    });
-                   
-                }
         
             });
-    
-    
-
-       
-    
-    
     
     }
 
     function winnerIs(score){
-        console.log('twój wynik to', Math.round((score + Number.EPSILON) * 100) / 100);
+        
+        let tlZjaj = gsap.timeline();
+        gameOverBackground.style.zIndex= "10";
+    
+        tlZjaj.to('.blur', 0.5, {filter:"blur(3px)"})
+            .set('.svg-zjaj', {scale: 1 , height: "100vh", x: "-40vw"})
+            .to('.zjaj', 0.3, {y: "-1%", repeat: -1, yoyo: true})
+            .to('.svg-zjaj', 6, {x: "30vw", ease: Power1.easeOut})
+            .set('.dymki-zjaj', {visibility: "visible", scale: 0, transformOrigin: "50% 50%"})
+            .addLabel('start-arm')
+            .from('.svg-zjaj .bubbles .right-one g', 0.5, {delay: 0.7, x: -800, y: 300, opacity: 0, stagger: 0.5, ease: Elastic.easeOut.config(1, 0.3)})
+            .from('.svg-zjaj .bubbles .right-two g', 0.5, {x: -600, y: 100, opacity: 0, stagger: 0.5, ease: Elastic.easeOut.config(1, 0.3)})
+            .from('.svg-zjaj .bubbles .left g', 0.5, {x: 600, y: 100, opacity: 0, stagger: 0.5, ease: Elastic.easeOut.config(1, 0.3)}, "start-arm")
+            .to('.dymki-zjaj', 1, {scale: 1, stagger: 1, transformOrigin: "50% 50%"})
+            .to('.svg-zjaj', 4 ,{x: "100vw", ease: Power1.easeIn, onComplete: showButton, onCompleteParams: [gamerTime]})
+            .to('.dymki-zjaj', 1, {scale: 0, transformOrigin: "50% 50%"}, "-=1.5");
     }
+
+
+    function showButton(caption, lost){
+
+        const p = document.createElement('p');
+        p.classList.add('game-over-caption');
+        
+
+        if(lost){
+            gsap.to('.svg-bubu ', {scale:2.5, x: "-50%", y: "-50%"});
+            gsap.to('.svg-bubu g', 1, {opacity: 0.7, stagger: 0.7});
+            p.innerText = caption; 
+        }else{
+            gsap.to('.svg-game', 1, {opacity: 0});
+            p.innerText = "Gratulacje, unieszkodliwiłeś toksycznie szaloną materię w " + Math.round((caption + Number.EPSILON) * 100) / 100 + "sek. Tylko Zjaj zrobiłby to lepiej!"; 
+            p.style.color= '#000000';
+        }
+
+        const btn = document.createElement('div');
+        btn.classList.add('button');
+        btn.classList.add('button-game-over');
+
+        const a = document.createElement('a');
+        a.classList.add('world-link');
+
+        const span = document.createElement('span');
+        span.innerText= "chcesz jeszcze raz?"
+
+        gameOverBackground.appendChild(p);
+        gameOverBackground.appendChild(btn);
+        btn.appendChild(a);
+        a.appendChild(span);
+        
+        btn.addEventListener('click', function(){
+            location.reload();
+        });
+       
+    }
+
+

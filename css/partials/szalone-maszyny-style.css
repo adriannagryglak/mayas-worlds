@@ -371,19 +371,18 @@ h1, h2 {
 }
 
 .game-over-background.game-over {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
   animation: appear 1s ease-in;
 }
 
 .game-over-background {
-  width: 0;
-  height: 0;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 }
 
 .game-over-caption {
@@ -424,7 +423,7 @@ h1, h2 {
   transform: scale(0);
 }
 
-.svg-upper-bubbles {
+.svg-upper-bubbles-bezjaj {
   width: 100vw;
   visibility: hidden;
   position: absolute;
@@ -442,6 +441,13 @@ h1, h2 {
   opacity: 0;
 }
 
+.svg-zjaj {
+  position: absolute;
+  width: 30vw;
+  transform: scale(0);
+  overflow: visible;
+}
+
 .small-flower,
 .snake-leaf-filling .fruit,
 .robo-worm,
@@ -452,7 +458,9 @@ h1, h2 {
 .boundries,
 .dymki path,
 .smoke-detectors,
-#start-line {
+#start-line,
+.dymki-zjaj,
+.svg-zjaj .left-bubbles {
   visibility: hidden;
 }
 
