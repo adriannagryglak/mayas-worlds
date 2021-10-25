@@ -24,6 +24,7 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  user-select: none;
 }
 
 h3{
@@ -31,12 +32,14 @@ h3{
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  user-select: none;
 }
 
 h1 {
   margin: 50px 0;
   font-family: $font-maya;
   font-size: 40px;
+  user-select: none;
 }
 
 .oval-background{
@@ -100,6 +103,12 @@ h1 {
   font-size: 25px;
 }
 
+p::selection,
+br::selection{
+  background-color: $vibrant-pink-dark;
+  color: $yellow;
+}
+
 /*animations*/
 
 @keyframes appear {
@@ -158,6 +167,7 @@ h1 {
 
 .world-link span{
   z-index: 2;
+  user-select: none;
 }
 
 .world-link::before{
@@ -202,6 +212,7 @@ footer{
   padding: 20px;
   text-align: center;
   background-color: white;
+  user-select: none;
 }
 
 footer span{

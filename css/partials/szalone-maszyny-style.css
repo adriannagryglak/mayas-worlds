@@ -1,7 +1,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,7 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  user-select: none;
 }
 
 h3 {
@@ -44,12 +45,14 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  user-select: none;
 }
 
 .oval-background {
@@ -111,6 +114,12 @@ h1 {
   font-size: 25px;
 }
 
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -167,6 +176,7 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  user-select: none;
 }
 
 .world-link::before {
@@ -210,10 +220,11 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -242,7 +253,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -271,11 +282,8 @@ footer span {
   background-color: #f7ebb1;
 }
 
-@font-face {
-  font-family: 'maja7regular';
-  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+html {
+  overflow-x: hidden;
 }
 
 .stop-scrolling {
@@ -366,7 +374,6 @@ h1, h2 {
 }
 
 .svg-game {
-  height: 90vh;
   width: 95vw;
 }
 
@@ -406,10 +413,12 @@ h1, h2 {
 
 .button.button-game-over .world-link {
   background-color: #f7ebb1;
+  cursor: pointer;
+  text-align: center;
 }
 
 .button.button-game-over .world-link span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   text-transform: none;
 }
 
@@ -424,9 +433,9 @@ h1, h2 {
 }
 
 .svg-upper-bubbles-bezjaj {
-  width: 100vw;
   visibility: hidden;
   position: absolute;
+  overflow: visible;
 }
 
 .svg-bubu {
@@ -822,5 +831,124 @@ h1, h2 {
 }
 
 /*media-queries */
+@media (min-width: 1300px) {
+  .svg-game {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 1420px) {
+  .game {
+    margin-top: 55%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .game {
+    margin-top: 800px;
+  }
+  .game-over-caption {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 780px) {
+  .game {
+    margin-top: 1000px;
+  }
+  .svg-bezjaj,
+  .svg-zjaj {
+    width: 60vw;
+  }
+  .button.button-game-over .world-link {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 780px) and (orientation: landscape) {
+  .svg-zjaj {
+    width: 30vw;
+  }
+  .game-over-caption {
+    top: 35%;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 680px) {
+  .svg-intro {
+    margin-top: 500px;
+  }
+  .home {
+    padding: 0;
+  }
+  .welcome-caption,
+  .monster-warning {
+    font-size: 22px;
+  }
+  .game {
+    margin-top: 1100px;
+  }
+}
+
+@media (max-width: 530px) {
+  .game {
+    margin-top: 600px;
+  }
+  .game-over-caption {
+    top: 35%;
+  }
+  .welcome-caption {
+    font-size: 20px;
+    text-align: center;
+  }
+  .welcome.subp {
+    padding: 40px;
+    width: 70%;
+  }
+  .monster-warning {
+    margin-top: 150px;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    width: 70%;
+  }
+  .monster-warning::before {
+    width: 70%;
+    left: -35%;
+  }
+  .monster-warning::after {
+    width: 60%;
+    right: -45%;
+  }
+  footer {
+    padding: 10px;
+    font-size: 15px;
+  }
+  footer span {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .svg-intro {
+    margin-top: 500px;
+  }
+  .oval-background {
+    padding: 0 80px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .home {
+    padding-bottom: 0;
+  }
+  .game {
+    margin-top: 800px;
+  }
+}
 
 /*# sourceMappingURL=szalone-maszyny-style.css.map */

@@ -1,7 +1,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,7 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  user-select: none;
 }
 
 h3 {
@@ -44,12 +45,14 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  user-select: none;
 }
 
 .oval-background {
@@ -111,6 +114,12 @@ h1 {
   font-size: 25px;
 }
 
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -167,6 +176,7 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  user-select: none;
 }
 
 .world-link::before {
@@ -210,10 +220,11 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -242,7 +253,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -269,13 +280,6 @@ footer span {
 
 .create-user .button:nth-of-type(2n) > a::before {
   background-color: #f7ebb1;
-}
-
-@font-face {
-  font-family: 'maja7regular';
-  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 body {
@@ -329,14 +333,14 @@ body {
 }
 
 h1 {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   margin: 30px 0;
   font-size: 45px;
 }
 
 /* welcome */
 .welcome-caption .family-name {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   text-transform: capitalize;
 }
 
@@ -465,7 +469,7 @@ h1 {
 }
 
 .p-hint {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   width: 30vw;
   font-size: 30px;
 }
@@ -505,7 +509,7 @@ h1 {
 }
 
 .question-caption ul span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .question-img {
@@ -543,7 +547,7 @@ h1 {
 
 .mamrotki-test .world-link {
   background-color: #f7ebb1;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   text-transform: none;
   font-size: 30px;
   text-align: center;
@@ -566,351 +570,351 @@ h1 {
 }
 
 .button:hover i:nth-of-type(1) {
-  transform: translate3d(21px, -63px, 0) rotate(182deg);
-  background: #00ff99;
+  transform: translate3d(50px, 96px, 0) rotate(344deg);
+  background: #00ff6a;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
 .button:hover i:nth-of-type(2) {
-  transform: translate3d(-37px, 94px, 0) rotate(46deg);
-  background: #0091ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(3) {
-  transform: translate3d(38px, -92px, 0) rotate(66deg);
-  background: #ff8400;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(4) {
-  transform: translate3d(-11px, -80px, 0) rotate(126deg);
-  background: #ffbf00;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(5) {
-  transform: translate3d(-69px, 43px, 0) rotate(313deg);
-  background: #00fffb;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(6) {
-  transform: translate3d(36px, -61px, 0) rotate(287deg);
-  background: #0099ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(7) {
-  transform: translate3d(-27px, -69px, 0) rotate(68deg);
-  background: #6a00ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(8) {
-  transform: translate3d(90px, 37px, 0) rotate(105deg);
-  background: #002fff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(9) {
-  transform: translate3d(37px, 97px, 0) rotate(244deg);
-  background: #ff0062;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(10) {
-  transform: translate3d(-46px, -69px, 0) rotate(84deg);
-  background: #00b7ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(11) {
-  transform: translate3d(28px, -97px, 0) rotate(214deg);
-  background: #ff00ea;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(12) {
-  transform: translate3d(-54px, -33px, 0) rotate(207deg);
-  background: #00ff2f;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(13) {
-  transform: translate3d(85px, 100px, 0) rotate(200deg);
-  background: #62ff00;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(14) {
-  transform: translate3d(-3px, -21px, 0) rotate(351deg);
-  background: #00ff48;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(15) {
-  transform: translate3d(86px, -83px, 0) rotate(243deg);
-  background: #ff00d0;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(16) {
-  transform: translate3d(53px, 70px, 0) rotate(123deg);
-  background: #bb00ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(17) {
-  transform: translate3d(86px, 68px, 0) rotate(253deg);
-  background: #37ff00;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(18) {
-  transform: translate3d(-58px, 67px, 0) rotate(59deg);
-  background: #ffc800;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(19) {
-  transform: translate3d(-49px, -3px, 0) rotate(53deg);
-  background: #00fffb;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(20) {
-  transform: translate3d(36px, -96px, 0) rotate(68deg);
-  background: #00eeff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(21) {
-  transform: translate3d(64px, -27px, 0) rotate(177deg);
-  background: #00f2ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(22) {
-  transform: translate3d(-86px, -5px, 0) rotate(121deg);
-  background: #9100ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(23) {
-  transform: translate3d(-26px, 3px, 0) rotate(351deg);
+  transform: translate3d(-21px, 53px, 0) rotate(127deg);
   background: #ff00e1;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(24) {
-  transform: translate3d(77px, 56px, 0) rotate(136deg);
-  background: #00e6ff;
+.button:hover i:nth-of-type(3) {
+  transform: translate3d(-26px, 18px, 0) rotate(319deg);
+  background: #ff0066;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(25) {
-  transform: translate3d(44px, 19px, 0) rotate(347deg);
-  background: #00ff0d;
+.button:hover i:nth-of-type(4) {
+  transform: translate3d(84px, -47px, 0) rotate(280deg);
+  background: #00ff88;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(26) {
-  transform: translate3d(51px, 39px, 0) rotate(254deg);
-  background: #11ff00;
+.button:hover i:nth-of-type(5) {
+  transform: translate3d(13px, -69px, 0) rotate(291deg);
+  background: #0091ff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(27) {
-  transform: translate3d(-43px, 72px, 0) rotate(164deg);
-  background: #5900ff;
+.button:hover i:nth-of-type(6) {
+  transform: translate3d(62px, -73px, 0) rotate(96deg);
+  background: #4000ff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(28) {
-  transform: translate3d(69px, 3px, 0) rotate(290deg);
-  background: #ff006a;
+.button:hover i:nth-of-type(7) {
+  transform: translate3d(74px, 23px, 0) rotate(249deg);
+  background: #7700ff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(29) {
-  transform: translate3d(85px, 80px, 0) rotate(45deg);
-  background: #7300ff;
+.button:hover i:nth-of-type(8) {
+  transform: translate3d(14px, -54px, 0) rotate(302deg);
+  background: #ddff00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(30) {
-  transform: translate3d(-17px, 99px, 0) rotate(190deg);
-  background: #e600ff;
+.button:hover i:nth-of-type(9) {
+  transform: translate3d(-74px, 77px, 0) rotate(5deg);
+  background: #3cff00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(31) {
-  transform: translate3d(-94px, -92px, 0) rotate(229deg);
-  background: #ff001e;
+.button:hover i:nth-of-type(10) {
+  transform: translate3d(58px, 24px, 0) rotate(225deg);
+  background: #2600ff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(32) {
-  transform: translate3d(3px, 18px, 0) rotate(345deg);
-  background: #ff1e00;
+.button:hover i:nth-of-type(11) {
+  transform: translate3d(-92px, -98px, 0) rotate(24deg);
+  background: #ff0062;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(33) {
-  transform: translate3d(9px, -41px, 0) rotate(26deg);
-  background: #002bff;
+.button:hover i:nth-of-type(12) {
+  transform: translate3d(-50px, 39px, 0) rotate(156deg);
+  background: #00aaff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(34) {
-  transform: translate3d(44px, -80px, 0) rotate(78deg);
-  background: #00ffae;
+.button:hover i:nth-of-type(13) {
+  transform: translate3d(-58px, 15px, 0) rotate(44deg);
+  background: #ff00bf;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(35) {
-  transform: translate3d(-52px, 65px, 0) rotate(165deg);
-  background: #d000ff;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(36) {
-  transform: translate3d(-60px, -84px, 0) rotate(196deg);
-  background: #ff00e6;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(37) {
-  transform: translate3d(-48px, -23px, 0) rotate(166deg);
-  background: #33ff00;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(38) {
-  transform: translate3d(-76px, 50px, 0) rotate(21deg);
-  background: #00ff15;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(39) {
-  transform: translate3d(-34px, 49px, 0) rotate(158deg);
-  background: #ffb300;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(40) {
-  transform: translate3d(-53px, 23px, 0) rotate(161deg);
-  background: #ffa600;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(41) {
-  transform: translate3d(72px, -30px, 0) rotate(342deg);
-  background: magenta;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(42) {
-  transform: translate3d(0px, -13px, 0) rotate(224deg);
+.button:hover i:nth-of-type(14) {
+  transform: translate3d(-40px, -13px, 0) rotate(57deg);
   background: #ffbf00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(43) {
-  transform: translate3d(-18px, 3px, 0) rotate(204deg);
-  background: #ff3300;
+.button:hover i:nth-of-type(15) {
+  transform: translate3d(-28px, -3px, 0) rotate(12deg);
+  background: #ff002b;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(44) {
-  transform: translate3d(-35px, -91px, 0) rotate(333deg);
-  background: #0026ff;
+.button:hover i:nth-of-type(16) {
+  transform: translate3d(-66px, -38px, 0) rotate(196deg);
+  background: #001eff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(45) {
-  transform: translate3d(28px, 19px, 0) rotate(53deg);
-  background: #ffbf00;
+.button:hover i:nth-of-type(17) {
+  transform: translate3d(-57px, -29px, 0) rotate(33deg);
+  background: #ff6f00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
-.button:hover i:nth-of-type(46) {
-  transform: translate3d(27px, 24px, 0) rotate(218deg);
-  background: #2bff00;
-  animation: bang 700ms ease-out forwards;
-  opacity: 0;
-}
-
-.button:hover i:nth-of-type(47) {
-  transform: translate3d(-49px, -89px, 0) rotate(302deg);
+.button:hover i:nth-of-type(18) {
+  transform: translate3d(10px, -81px, 0) rotate(71deg);
   background: #9900ff;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
+.button:hover i:nth-of-type(19) {
+  transform: translate3d(-17px, -99px, 0) rotate(171deg);
+  background: #aa00ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(20) {
+  transform: translate3d(14px, 97px, 0) rotate(119deg);
+  background: #00ff7b;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(21) {
+  transform: translate3d(-42px, 18px, 0) rotate(311deg);
+  background: #003cff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(22) {
+  transform: translate3d(68px, 27px, 0) rotate(335deg);
+  background: #00b7ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(23) {
+  transform: translate3d(42px, 18px, 0) rotate(229deg);
+  background: #4000ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(24) {
+  transform: translate3d(-8px, 71px, 0) rotate(173deg);
+  background: #4800ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(25) {
+  transform: translate3d(-61px, -35px, 0) rotate(322deg);
+  background: deepskyblue;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(26) {
+  transform: translate3d(-93px, -5px, 0) rotate(189deg);
+  background: #0099ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(27) {
+  transform: translate3d(-81px, -9px, 0) rotate(353deg);
+  background: #ff00bf;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(28) {
+  transform: translate3d(-21px, -29px, 0) rotate(206deg);
+  background: #ff0077;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(29) {
+  transform: translate3d(-31px, -97px, 0) rotate(180deg);
+  background: #0048ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(30) {
+  transform: translate3d(31px, 33px, 0) rotate(124deg);
+  background: #fff700;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(31) {
+  transform: translate3d(52px, 6px, 0) rotate(265deg);
+  background: #00ff2f;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(32) {
+  transform: translate3d(-67px, 96px, 0) rotate(277deg);
+  background: #6f00ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(33) {
+  transform: translate3d(86px, 64px, 0) rotate(245deg);
+  background: #00ff95;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(34) {
+  transform: translate3d(-40px, 30px, 0) rotate(181deg);
+  background: #ff00f7;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(35) {
+  transform: translate3d(-35px, 26px, 0) rotate(193deg);
+  background: #ff6f00;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(36) {
+  transform: translate3d(51px, 44px, 0) rotate(76deg);
+  background: #00d9ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(37) {
+  transform: translate3d(-44px, -13px, 0) rotate(132deg);
+  background: #ffbb00;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(38) {
+  transform: translate3d(71px, 58px, 0) rotate(235deg);
+  background: #40ff00;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(39) {
+  transform: translate3d(-48px, 59px, 0) rotate(162deg);
+  background: #ff001e;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(40) {
+  transform: translate3d(68px, 3px, 0) rotate(271deg);
+  background: #ffb300;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(41) {
+  transform: translate3d(43px, -8px, 0) rotate(2deg);
+  background: #ff9900;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(42) {
+  transform: translate3d(59px, 77px, 0) rotate(140deg);
+  background: #8c00ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(43) {
+  transform: translate3d(61px, -23px, 0) rotate(131deg);
+  background: #b3ff00;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(44) {
+  transform: translate3d(7px, -64px, 0) rotate(294deg);
+  background: #8400ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(45) {
+  transform: translate3d(89px, -75px, 0) rotate(10deg);
+  background: #ff0077;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(46) {
+  transform: translate3d(-82px, -8px, 0) rotate(180deg);
+  background: #00ffa6;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
+.button:hover i:nth-of-type(47) {
+  transform: translate3d(32px, -94px, 0) rotate(48deg);
+  background: #bb00ff;
+  animation: bang 700ms ease-out forwards;
+  opacity: 0;
+}
+
 .button:hover i:nth-of-type(48) {
-  transform: translate3d(48px, 86px, 0) rotate(350deg);
-  background: #ff3c00;
+  transform: translate3d(44px, -5px, 0) rotate(65deg);
+  background: #ffbb00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
 .button:hover i:nth-of-type(49) {
-  transform: translate3d(83px, 70px, 0) rotate(341deg);
-  background: #ff00dd;
+  transform: translate3d(32px, 100px, 0) rotate(113deg);
+  background: #37ff00;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
 
 .button:hover i:nth-of-type(50) {
-  transform: translate3d(5px, -17px, 0) rotate(289deg);
-  background: #0011ff;
+  transform: translate3d(-2px, -46px, 0) rotate(207deg);
+  background: #ff0080;
   animation: bang 700ms ease-out forwards;
   opacity: 0;
 }
@@ -962,6 +966,15 @@ h1 {
   animation: order-pop 8s 2s linear both;
 }
 
+.order-container p {
+  opacity: 0;
+  font-size: 22px;
+}
+
+.order-container .refresh-tip {
+  animation: appear 1s ease-in forwards;
+}
+
 /*media queries*/
 @media (max-width: 1355px) {
   .p-hint {
@@ -974,6 +987,13 @@ h1 {
 }
 
 @media (max-width: 950px) {
+  .oval-background,
+  .oval-bottom {
+    width: 45vw;
+  }
+  .oval-bottom img {
+    top: -10%;
+  }
   .p-hint {
     font-size: 20px;
   }
@@ -1002,6 +1022,15 @@ h1 {
 }
 
 @media (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+  }
+  .welcome-title {
+    font-size: 20px;
+  }
+  .welcome-caption {
+    font-size: 19px;
+  }
   .mamrotki-test {
     margin: 300px 50px 50px 50px;
   }
@@ -1020,7 +1049,13 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+  .welcome-title.subp {
+    margin-top: 80%;
+  }
+  .oval-background {
+    padding: 0 35px;
+  }
   .oval-3 {
     left: -15%;
   }
@@ -1030,14 +1065,9 @@ h1 {
   .oval-bottom {
     transform: translateY(-16%);
   }
-  h1 {
-    font-size: 35px;
-  }
-  .welcome-title {
-    font-size: 20px;
-  }
-  .welcome-caption {
-    font-size: 19px;
+  .welcome.subp {
+    width: 70%;
+    padding: 50px;
   }
   .mamrotki-map {
     height: 40vh;
@@ -1093,14 +1123,32 @@ h1 {
     transform: translateX(-50%) rotate(-90deg);
     bottom: -20px;
   }
+  footer {
+    padding: 10px;
+    font-size: 15px;
+  }
+  footer span {
+    font-size: 15px;
+  }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   h1 {
-    font-size: 30px;
+    font-size: 24px;
+  }
+  .welcome-title.subp {
+    font-size: 22px;
+  }
+  .oval-background {
+    padding: 0 20px;
+    width: 70vw;
+  }
+  .welcome.subp {
+    width: 90%;
   }
   .oval-bottom {
     transform: translateY(-30%);
+    width: 70vw;
   }
   .mamrotki-map {
     margin: 0 20px;
@@ -1122,6 +1170,10 @@ h1 {
 }
 
 @media (max-width: 350px) {
+  .welcome.subp {
+    text-align: center;
+    padding: 30px;
+  }
   .question {
     font-size: 16px;
   }

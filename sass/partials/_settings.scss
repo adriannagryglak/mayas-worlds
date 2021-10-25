@@ -28,12 +28,13 @@ $grey: #BBB7B7;
 $grey-light: #dddbdb;
 
 $font-text: 'Cormorant Garamond', serif;
-$font-maya: 'maja7regular', serif;
+$font-maya: 'maja7regular', 'Cormorant Garamond', serif;
 
 @font-face {
   font-family: 'maja7regular';
-  src: url('../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
-       url('../vendor/maya-font/maja7-webfont.woff') format('woff');
+  src: url('../../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
+       url('../../vendor/maya-font/maja7-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+

@@ -1,7 +1,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,7 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  user-select: none;
 }
 
 h3 {
@@ -44,12 +45,14 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  user-select: none;
 }
 
 .oval-background {
@@ -111,6 +114,12 @@ h1 {
   font-size: 25px;
 }
 
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -167,6 +176,7 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  user-select: none;
 }
 
 .world-link::before {
@@ -210,10 +220,11 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -242,7 +253,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {

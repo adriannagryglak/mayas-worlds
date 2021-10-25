@@ -1,15 +1,6 @@
 @import './settings.scss';
 @import './global.scss';
 
-@font-face {
-  font-family: 'maja7regular';
-  src: url('../../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
-    url('../../vendor/maya-font/maja7-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-$font-maya: 'maja7regular', serif;
 
 body{
   overflow: hidden;
@@ -365,6 +356,15 @@ h1 {
   animation: order-pop 8s 2s linear both;
 }
 
+.order-container p{
+  opacity: 0;
+  font-size: 22px;
+}
+
+.order-container .refresh-tip{
+  animation: appear 1s ease-in forwards;
+}
+
 
 /*media queries*/
 
@@ -380,6 +380,15 @@ h1 {
 }
 
 @media (max-width: 950px) {
+  .oval-background,
+  .oval-bottom{
+    width: 45vw;
+  }
+
+  .oval-bottom img{
+    top: -10%;
+  }
+
   .p-hint {
     font-size: 20px;
   }
@@ -411,6 +420,19 @@ h1 {
 }
 
 @media (max-width: 800px) {
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .welcome-title {
+    font-size: 20px;
+  }
+
+  .welcome-caption {
+    font-size: 19px;
+  }
+
   .mamrotki-test {
     margin: 300px 50px 50px 50px;
   }
@@ -432,7 +454,14 @@ h1 {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
+  .welcome-title.subp {
+    margin-top: 80%;
+}
+.oval-background{
+  padding: 0 35px;
+}
   .oval-3 {
     left: -15%;
   }
@@ -443,17 +472,9 @@ h1 {
   .oval-bottom {
     transform: translateY(-16%);
   }
-
-  h1 {
-    font-size: 35px;
-  }
-
-  .welcome-title {
-    font-size: 20px;
-  }
-
-  .welcome-caption {
-    font-size: 19px;
+  .welcome.subp {
+    width: 70%;
+    padding: 50px;
   }
 
   .mamrotki-map {
@@ -521,15 +542,32 @@ h1 {
     transform: translateX(-50%) rotate(-90deg);
     bottom: -20px;
   }
+  footer{
+    padding: 10px;
+    font-size: 15px;
+  }
+  footer span {
+    font-size: 15px;
+  }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
-
+  .welcome-title.subp {
+    font-size: 22px;
+  }
+  .oval-background{
+    padding: 0 20px;
+    width: 70vw;
+  }
+  .welcome.subp{
+    width: 90%;
+  }
   .oval-bottom {
     transform: translateY(-30%);
+    width: 70vw;
   }
   .mamrotki-map{
     margin: 0 20px;
@@ -553,6 +591,11 @@ h1 {
 
 @media (max-width: 350px){
   
+  .welcome.subp{
+    text-align: center;
+    padding: 30px;
+  }
+
   .question{
     font-size: 16px;
   }

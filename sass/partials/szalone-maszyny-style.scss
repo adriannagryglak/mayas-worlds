@@ -1,17 +1,9 @@
 @import './settings.scss';
 @import './global.scss';
 
-@font-face {
-  font-family: 'maja7regular';
-  src: url('../../vendor/maya-font/maja7-webfont.woff2') format('woff2'),
-    url('../../vendor/maya-font/maja7-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+html{
+  overflow-x: hidden;
 }
-
-$font-maya: 'maja7regular', serif;
-
-
 
 .stop-scrolling {
   height: 100%;
@@ -101,7 +93,6 @@ h1,h2{
 }
 
 .svg-game{
-height: 90vh;
 width: 95vw;
 }
 
@@ -140,6 +131,8 @@ width: 95vw;
 
 .button.button-game-over .world-link{
   background-color: $yellow;
+  cursor: pointer;
+  text-align: center;
 }
 
 .button.button-game-over .world-link span{
@@ -157,10 +150,11 @@ width: 95vw;
   transform: scale(0);
 }
 
-.svg-upper-bubbles-bezjaj{
-width: 100vw;
+
+.svg-upper-bubbles-bezjaj {
 visibility: hidden;
 position: absolute;
+overflow: visible;
 }
 
 .svg-bubu {
@@ -181,7 +175,6 @@ position: absolute;
   transform: scale(0);
   overflow: visible;
 }
-
 
 
 // hiding animated svg parts
@@ -292,8 +285,6 @@ position: absolute;
 }
 
 
-
-
 //coloring svg-intro
 
 .tulip{
@@ -301,7 +292,7 @@ position: absolute;
   transform-origin: center;
 }
 
-.banana-filling .left{
+.banana-filling .left {
   fill: $blue;
 }
 
@@ -546,10 +537,146 @@ fill: $yellow-dark;
   fill: $orange;
 }
 
+
 /*coloring svg-game*/
 
 .patches path{
   fill: $beige;
 }
+
+
 /*media-queries */
 
+
+@media (min-width: 1300px){
+  .svg-game{
+   height: 90vh;
+  }
+
+}
+@media (max-width: 1420px){
+  .game{
+    margin-top: 55%;
+  }
+}
+@media (max-width: 1100px){
+  .game{
+    margin-top: 800px;
+  }
+  .game-over-caption{
+    font-size: 24px;
+  }
+  
+}
+@media (max-width: 780px){
+  .game{
+    margin-top: 1000px;
+  }
+  .svg-bezjaj,
+  .svg-zjaj{
+    width: 60vw;
+  }
+  .button.button-game-over .world-link{
+   padding: 25px;
+  }
+
+}
+
+@media (max-width: 780px) and (orientation: landscape){
+  .svg-zjaj{
+    width: 30vw;
+  }
+  .game-over-caption{
+    top: 35%;
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width: 680px){
+
+  .svg-intro{
+    margin-top: 500px;
+  }
+  .home{
+    padding: 0;
+  }
+
+  .welcome-caption,
+  .monster-warning{
+    font-size: 22px;
+  }
+  .game{
+    margin-top: 1100px;
+  }
+
+}
+@media (max-width: 530px){
+  .game{
+    margin-top: 600px;
+  }
+  .game-over-caption{
+    top: 35%;
+  }
+  .welcome-caption{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .welcome.subp{
+    padding: 40px;
+    width: 70%;
+  }
+
+  .monster-warning{
+    margin-top: 150px;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    width: 70%;
+  }
+
+  .monster-warning::before{
+    width: 70%;
+    left: -35%;
+  }
+  .monster-warning::after{
+    width: 60%;
+    right: -45%;
+  }
+  footer{
+    padding: 10px;
+    font-size: 15px;
+  }
+  footer span {
+    font-size: 15px;
+  }
+  
+}
+
+@media (max-width: 430px){
+
+  .svg-intro{
+    margin-top: 500px;
+  }
+
+  .oval-background{
+    padding: 0 80px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  .home{
+    padding-bottom: 0;
+  }
+
+  .game {
+    margin-top: 800px;
+  }
+}

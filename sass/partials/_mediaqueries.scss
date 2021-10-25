@@ -210,9 +210,15 @@
 
     .sisters-caption{
       font-size: 18px;
-      top: 33%;
+      top: 35%;
       line-height: 18px;
       left: 20%;
+    }
+  }
+
+  @media (max-width: 360px){
+    .sisters-caption{
+      font-size: 14px;
     }
   }
 

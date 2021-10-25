@@ -1,7 +1,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -38,6 +38,10 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -45,12 +49,20 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -114,6 +126,18 @@ h1 {
   font-size: 25px;
 }
 
+p::-moz-selection,
+br::-moz-selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -173,6 +197,10 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .world-link::before {
@@ -216,10 +244,14 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -252,7 +284,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -284,7 +316,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -292,7 +324,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -321,6 +353,10 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -328,12 +364,20 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -397,6 +441,18 @@ h1 {
   font-size: 25px;
 }
 
+p::-moz-selection,
+br::-moz-selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -456,6 +512,10 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .world-link::before {
@@ -499,10 +559,14 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -535,7 +599,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -569,6 +633,10 @@ footer span {
   height: 120vh;
   -ms-flex-pack: center;
       justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -637,7 +705,7 @@ h1::after {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -645,7 +713,7 @@ h1::after {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -674,6 +742,10 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -681,12 +753,20 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -750,6 +830,18 @@ h1 {
   font-size: 25px;
 }
 
+p::-moz-selection,
+br::-moz-selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -809,6 +901,10 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .world-link::before {
@@ -852,10 +948,14 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -888,7 +988,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -951,7 +1051,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -959,7 +1059,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -988,6 +1088,10 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -995,12 +1099,20 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -1064,6 +1176,18 @@ h1 {
   font-size: 25px;
 }
 
+p::-moz-selection,
+br::-moz-selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -1123,6 +1247,10 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .world-link::before {
@@ -1166,10 +1294,14 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -1202,7 +1334,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -1240,6 +1372,10 @@ footer span {
   -ms-flex-pack: center;
       justify-content: center;
   border-top: 2px solid #e6c8c5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .worlds-top {
@@ -1293,7 +1429,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -1301,7 +1437,7 @@ footer span {
 /*variables*/
 @font-face {
   font-family: 'maja7regular';
-  src: url("../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../vendor/maya-font/maja7-webfont.woff") format("woff");
+  src: url("../../vendor/maya-font/maja7-webfont.woff2") format("woff2"), url("../../vendor/maya-font/maja7-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -1330,6 +1466,10 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -1337,12 +1477,20 @@ h3 {
   font-size: 30px;
   margin: 8% auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1 {
   margin: 50px 0;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .oval-background {
@@ -1406,6 +1554,18 @@ h1 {
   font-size: 25px;
 }
 
+p::-moz-selection,
+br::-moz-selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
+p::selection,
+br::selection {
+  background-color: #CB6E95;
+  color: #f7ebb1;
+}
+
 /*animations*/
 @keyframes appear {
   from {
@@ -1465,6 +1625,10 @@ h1 {
 
 .world-link span {
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .world-link::before {
@@ -1508,10 +1672,14 @@ footer {
   padding: 20px;
   text-align: center;
   background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer span {
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   font-size: 18px;
 }
 
@@ -1544,7 +1712,7 @@ footer span {
   min-width: 30%;
   font-size: 25px;
   text-align: center;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
 }
 
 .create-user input:focus {
@@ -1593,7 +1761,7 @@ footer span {
   z-index: 4;
   position: absolute;
   font-size: 38px;
-  font-family: "maja7regular", serif;
+  font-family: "maja7regular", "Cormorant Garamond", serif;
   width: 40%;
   top: 35%;
   left: 20%;
@@ -1783,9 +1951,15 @@ footer span {
   }
   .sisters-caption {
     font-size: 18px;
-    top: 33%;
+    top: 35%;
     line-height: 18px;
     left: 20%;
+  }
+}
+
+@media (max-width: 360px) {
+  .sisters-caption {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */
