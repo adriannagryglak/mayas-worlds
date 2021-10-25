@@ -22,6 +22,8 @@
                     elements[el] = newEl; 
                 }
             }
+
+            console.log(elements);
             
             //generuj buttony dynamicznie 
             for (let button in this.data.buttons){
@@ -51,8 +53,8 @@
             //media queries for loading proper image in sisters-section
             const mediaQuery = window.matchMedia('(max-width: 768px)');
             if (mediaQuery.matches) {
-                document.querySelector(select.sisters.sistersImg).src = './images/sisters-mobile.png';
-                document.querySelector(select.sisters.kopulyImg).src = './images/kopuly-mobile.png';
+                elements.sistersImg.src = './images/sisters-mobile.png';
+                elements.kopulyImg.src = './images/kopuly-mobile.png';
               }
         },
 
