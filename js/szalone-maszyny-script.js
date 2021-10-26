@@ -26,11 +26,7 @@
         animateIntro(){
 
             //ANIMATE SVG-INTRO
-            let tlSnailEye = gsap.timeline({repeat: -1});
-            tlSnailEye.to(".robo-worm .eye", 0.3, {x:-2, y: 3, ease: Power0.easeNone})
-            .to(".robo-worm .eye", 0.5, {x:2, ease: Power0.easeNone})
-            .to(".robo-worm .eye", 0.5, {x: 1, y: -3, ease: Power0.easeNone})
-            .to(".robo-worm .eye", 0.3, {x:0, y: 0, ease: Power0.easeNone});
+        
 
             //should be able to put in one timeline
             let tlGhostsBlink1 = gsap.timeline({repeat: -1, yoyo: true});
@@ -43,6 +39,12 @@
             .to(".ghosts .eye-2, .eye-6", 0.2, {scaleY:0.2, transformOrigin:"50% 50%", delay: 1})
             .from('.ghosts .eye-5', 0.1, {scaleY: 0, transformOrigin:"50% 50%"}, 'start')
 
+            let tlSnailEye = gsap.timeline({repeat: -1});
+            tlSnailEye.to(".robo-worm .eye", 0.3, {x:-2, y: 3, ease: Power0.easeNone})
+            .to(".robo-worm .eye", 0.5, {x:2, ease: Power0.easeNone})
+            .to(".robo-worm .eye", 0.5, {x: 1, y: -3, ease: Power0.easeNone})
+            .to(".robo-worm .eye", 0.3, {x:0, y: 0, ease: Power0.easeNone});
+
             let tlMaster = gsap.timeline();
 
             tlMaster.addLabel('start')
@@ -52,7 +54,7 @@
             .to(".petals path", 2, {fill : "#f7ebb1"}, 'start')
             .from(".small-flower", 2, {scale: 0, transformOrigin:"50% 50%"})
             .from(".snake-leaf-filling .fruit", 1, {scale: 0.2, transformOrigin: '50% 50%', stagger: 0.5})
-            .from(".robo-worm", 10, {x:300}, 'start')
+            .from(".robo-worm", 10, {x: "100%"}, 'start')
             .add(tlSnailEye)
             .to(".trybik-upper", 3, {rotation:360, transformOrigin:"50% 50%", repeat: -1, ease: Power0.easeNone}, '<') 
             .from(".tulip-stem", 12, {scaleY: 0.3},'start');
