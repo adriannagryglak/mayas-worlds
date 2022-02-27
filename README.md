@@ -3,7 +3,7 @@
 ##
 Mayas Worlds is a website with two subpages (third yet to come) I created in vanilla Javascript as my first real-life project. Inspired by my 7-years-old sister Majas drawings, I turned them into animated svgs and created simple mini-games (funny cats quiz and destroying the covid) as a tribute to children's imagination. So be prepared for silly names, ridiculous quotes (all unfortunatelly only in polish).
 ##
-✨[visit Mayas Worlds live here](mayas-worlds.netlify.app)
+✨[visit Mayas Worlds live here](https://mayas-worlds.netlify.app)
 ##
 ###### _As my learning journey continues I see more imperfections in this code.  Nevertheless it sparks so much joy._ 
 ##
