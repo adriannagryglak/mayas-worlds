@@ -18,7 +18,7 @@ Mayas Worlds is a website with two subpages (third yet to come) I created in van
 ## Tech
 - GSAP Green Sock
 - JS ES6
-- Sass
+- CSS Sass 
 
 ##
 ## Installation
