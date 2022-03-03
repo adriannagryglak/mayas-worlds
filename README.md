@@ -7,6 +7,7 @@ Mayas Worlds is a website with two subpages (third yet to come) I created in van
 ##
 ###### _As my learning journey continues I see more imperfections in this code.  Nevertheless it sparks so much joy._ 
 ##
+![](https://github.com/adriannagryglak/mayas-worlds/blob/master/images/mw-screenshot1.PNG)
 ## Features
 - landing page with links to subpages
 - first subpage with a quiz, hidden clues, personalized (for few users names) intro
